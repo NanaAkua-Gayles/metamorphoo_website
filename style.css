@@ -335,3 +335,7 @@ td{
     background-color: #07001f;
     color: blue;
 } 
+.excerpts-container{
+    display: flex;
+    gap: 20px;
+}
