@@ -1,0 +1,337 @@
+/*CSS for the JOIN US FORM*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+.form{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+.container{
+    background: #fff;
+    width: 450px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgb(136, 40, 40);
+}
+form{
+    margin:0 2rem;
+}
+.form-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: o.4rem;
+}
+input{
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding-left: 1.5rem;
+    font-size: 15px;
+}
+.input-group{
+    padding: 1% 0;
+    position: relative;
+}
+.input:focus{
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid hsl(327, 90%, 28%);
+}
+input::placeholder{
+    color: transparent;
+}
+label{
+    color: #757575;
+    position: relative;
+    left: 1.2rem;
+    top: -1.3em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+input:focus~label,input:not(:placeholder-shown)~label{
+    top: -2.5em;
+    color: rgb(197, 151, 52);
+    font-size: 15px;
+}
+.btn{
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: rgb(235, 125, 125);
+    color: white;
+    cursor: pointer;
+    transition: 0.9s;
+}
+.btn:hover{
+    background: #07001f;
+}
+.subtitle{
+    text-align: center;
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: rgb(235, 125, 125);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*CSS for the HOME PAGE*/
+
+
+.homecontainer{
+    display: flex;
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    border-bottom: 0px;
+    margin: 20px;
+}
+.tab{
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom: none;
+    background: #f1f1f1;
+    font-weight: bold;
+}
+.tab-link{
+    text-decoration: none;
+}
+.tab-link:hover{
+    background-color:none;
+    color: #9daaf2;
+} 
+.joinus-button{
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1px 1px;
+    transition: background-color 0.3s;
+    border-radius: 15px;
+    border-color: rgb(77, 77, 199);
+}
+.joinus-button:hover{
+    background-color: #f1f1f1;
+    color: blue;
+} 
+.joinus-link{
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 15px;
+}
+.joinus-link:hover{
+    background-color:none;
+    color: #9daaf2;
+} 
+#headline{
+    font-size: 25px;
+    font-family: Tahoma;
+    font-weight: bold;
+    color: red;
+}
+
+#headline1{
+    font-size: 20px;
+    color: blue;
+}
+
+#horizontal-rule{
+    border-color: rgb(0, 174, 255);
+}
+.table-container{
+    border: 1px solid;
+    padding: 20px;
+    margin-top: 5px;
+    margin-left: 0px;
+}
+table{
+    width: 99%;
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid #ddd;
+    flex-direction: column;
+}
+#video-data{
+    height: 650px;
+    width: 450px;
+}
+#links-data{
+    height: 650px;
+    width: 200px;
+    font-weight: bold;
+    font-size: 25px;
+    background: rgb(9, 9, 77);
+}
+.data-link{
+    color: rgba(207, 34, 34, 0.753);
+}
+.data-link:hover{
+    color: orange;
+}
+#headline3{
+    font-weight: bolder;
+    color: red;
+    text-align: center;
+    font-size: 27px;
+}
+#headline4{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 40px;
+}
+.what-we-do{
+    display: flex;
+
+}
+.pin{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: none;
+}
+.content{
+    flex: 1;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(11, 11, 110);
+}
+#table2{
+    height: 500px;
+    width: fill;
+    border: none;
+}
+#department-teaser{
+    text-align: left;
+    background: rgb(11, 11, 110);
+}
+#department-photo{
+    font-weight: bold;
+    font-family: Calibri;
+    font-size: 17px;
+    color: rgba(245, 245, 245, 0.938);
+}
+.overlay-text{
+    position: absolute;
+    transform: translate(220%, -140%);
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+}
+#teaser-headline{
+    font-family: Calibri;
+    font-size: 40px;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-left: 40px;
+}
+#teaser-text{
+    font-family: Calibri;
+    font-size: 25px;
+    color: rgba(245, 245, 245, 0.938);
+    margin-left: 40px;   
+}
+.department-button{
+    padding: 10px 20px;
+    background: rgba(255, 166, 0, 0.918);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-left: 40px;
+}
+.department-button:hover{
+    background-color: #07001f;
+}
+.department-link{
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+.department-link:hover{
+    background-color: #07001f;
+    color: blue;
+} 
+.podcast-container-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.podcast-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 800px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.column{
+    flex: 0 0 31%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#podcast-heading{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+#podcast-content{
+    text-align: center;
+    margin-right: 120px;
+    margin-left: 120px;
+    font-size: 20px;
+    color: rgb(11, 11, 110);
+}
+.podcast-button{
+    padding: 5px 10px;
+    background: rgba(255, 166, 0, 0.918);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    width: 300px;
+    height: 40px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+.podcast-button:hover{
+    background-color: #07001f;
+}
+.podcast-link{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+.podcast-link:hover{
+    background-color: #07001f;
+    color: blue;
+} 
