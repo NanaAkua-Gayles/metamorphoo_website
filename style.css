@@ -137,10 +137,11 @@ input:focus~label,input:not(:placeholder-shown)~label{
     color: #9daaf2;
 } 
 #headline{
-    font-size: 25px;
+    font-size: 30px;
     font-family: Tahoma;
     font-weight: bold;
     color: red;
+    text-align: center;
 }
 
 #headline1{
@@ -306,9 +307,9 @@ td{
     margin-left: 120px;
     font-size: 20px;
     color: rgb(11, 11, 110);
+    justify-content: center;
 }
 .podcast-button{
-    padding: 5px 10px;
     background: rgba(255, 166, 0, 0.918);
     color: #fff;
     border: none;
@@ -318,8 +319,7 @@ td{
     transition: background-color 0.3s;
     width: 300px;
     height: 40px;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 500px;
 }
 .podcast-button:hover{
     background-color: #07001f;
@@ -335,7 +335,59 @@ td{
     background-color: #07001f;
     color: blue;
 } 
-.excerpts-container{
-    display: flex;
-    gap: 20px;
+.excerpts-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.excerpts{
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 400px;
+    width: 400px;
+}
+.text-box{
+    height: 650px;
+    width: 450px;
+}
+#excerpts-subtitle{
+    font-size: 20px;
+    color:  rgba(255, 166, 0, 0.918);
+    margin-left: 40px;
+}
+#excerpts-headline{
+    font-weight: bold;
+    color: red;
+    font-size: 36px;
+    margin-left: 40px;
+}
+.excerpts-button{
+    background: rgba(255, 166, 0, 0.918);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 300px;
+    margin-left: 40px;
+}
+.excerpts-button:hover{
+    background-color: #07001f;
+}
+.excerpts-link{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+.excerpts-link:hover{
+    background-color: #07001f;
+    color: blue;
+}
+.excerpts1{
+    text-align: center;
+    font-weight: bold;
 }
