@@ -408,7 +408,7 @@ td{
     color: #fff;
     font-weight: bold;
     font-weight: 600px;
-    height: 450px;
+    height: 400px;
     width: 100%;
 }
 #end-headers{
@@ -418,7 +418,7 @@ td{
     text-decoration: none;
 }
 #footer{
-    background-color: rgb(11, 11, 110);
+    background-color: red;
     text-align: center;
     color: white;
 }
@@ -426,3 +426,70 @@ td{
     padding: 30px;
     border-spacing: 20px;
 }
+#wrapper-id{
+    margin-left: 200px;
+    margin-bottom: -5px;
+}
+.subscription-wrapper{
+    width: 900px;
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(11, 11, 110);
+    border-radius: 70px;
+}
+.wrapper-text{
+    margin-right: 40px;
+    font-weight: bold;
+    color: white;
+}
+.subscription-container{
+    position: relative;
+    width: 550px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscribe-button{
+    position: absolute;
+    width: 140px;
+    height: 44px;
+    background-color: red;
+    border-radius: 75px;
+    cursor: pointer;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+}
+#subscribe-button:hover{
+    background-color: blue;
+}
+.subscribe{
+    width: 350px;
+}
+#emailInput{
+    width: 350px;
+    margin-left: -160px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+.subscribe-placeholder{
+    position: absolute;
+    top: 30%;
+    transform: translateY(-10%);
+    color: #aaa;
+    transition: 0.3s ease;
+}
+#emailInput:focus + .subscribe-placeholder,
+#emailInput:not(:subscribe-placeholder-shown) + .subscribe-placeholder
+{top: -10px; font-size: 12px;}
