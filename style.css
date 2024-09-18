@@ -185,7 +185,7 @@ td{
 }
 #headline3{
     font-weight: bolder;
-    color: red;
+    color: blue;
     text-align: center;
     font-size: 27px;
 }
@@ -193,6 +193,7 @@ td{
     font-weight: bolder;
     text-align: center;
     font-size: 40px;
+    color: red;
 }
 .what-we-do{
     display: flex;
@@ -300,6 +301,7 @@ td{
     text-align: center;
     font-weight: bold;
     font-size: 40px;
+    color: red;
 }
 #podcast-content{
     text-align: center;
@@ -337,7 +339,7 @@ td{
 } 
 .excerpts-table{
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: none;
 }
 .excerpts{
     border: 1px solid #ccc;
@@ -385,9 +387,42 @@ td{
 }
 .excerpts-link:hover{
     background-color: #07001f;
-    color: blue;
+    color: rgb(69, 69, 240);
 }
 .excerpts1{
     text-align: center;
     font-weight: bold;
+}
+#excerpts-date{
+    color: red;
+}
+.read-more-link{
+    text-decoration: none;
+    color: red;
+}
+.read-more{
+    color: red;
+}
+.end{
+    background-color: rgb(11, 11, 110);
+    color: #fff;
+    font-weight: bold;
+    font-weight: 600px;
+    height: 450px;
+    width: 100%;
+}
+#end-headers{
+    font-size: 25px;
+}
+.useful-data{
+    text-decoration: none;
+}
+#footer{
+    background-color: rgb(11, 11, 110);
+    text-align: center;
+    color: white;
+}
+#useful-links-table{
+    padding: 30px;
+    border-spacing: 20px;
 }
