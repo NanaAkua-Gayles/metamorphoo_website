@@ -162,7 +162,7 @@ input:focus~label,input:not(:placeholder-shown)~label{
 #first-table{
     width: 100%;
     border:none;
-    background: rgb(9, 9, 77);
+    background: rgb(11, 11, 110);
 }
 td{
     border: none;
@@ -173,10 +173,11 @@ td{
     width: 580px;
     font-weight: bold;
     font-size: 25px;
-    background: rgb(9, 9, 77);
+    background: rgb(11, 11, 110);
 }
 .data-link{
     color: white;
+    text-decoration: none;
 }
 .data-link:hover{
     color: orange;
@@ -542,3 +543,49 @@ td{
         font-size: 16px;
     }
 }
+#about-headline{
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+}
+#headline-text{
+    font-size: 20px;
+    text-align: center;
+}
+.mission-container{
+    grid-template-columns: repeat(2, 570px);
+    grid-template-rows: repeat(3, 570px);
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+
+}
+.mission-item{
+    padding: 20px;
+    text-align: center;
+    background-color: red;
+    font-size: 22px;
+    box-shadow: 5px 5px 30px rgba(207, 27, 27, 1);
+    border-radius: 15px;
+}
+.vision-item{
+    padding: 20px;
+    text-align: center;
+    background-color: orange;
+    font-size: 22px;
+    box-shadow: 5px 5px 30px rgb(207, 108, 27);
+    border-radius: 15px;
+}
+.value-item{
+    padding: 20px;
+    text-align: center;
+    background-color: blue;
+    font-size: 22px;
+    box-shadow: 5px 5px 30px rgb(27, 105, 207);
+    border-radius: 15px;
+}
+@media (max-width:600px) {
+    .mission-container{
+        grid-template-columns: 1fr;
+    }
+} 
