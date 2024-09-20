@@ -145,40 +145,38 @@ input:focus~label,input:not(:placeholder-shown)~label{
 }
 
 #headline1{
-    font-size: 20px;
+    font-size: 25px;
     color: blue;
+    margin-left: 30px;
 }
 
 #horizontal-rule{
     border-color: rgb(0, 174, 255);
 }
 .table-container{
-    border: 1px solid;
-    padding: 20px;
+    border: none;
+    padding: 15px;
     margin-top: 5px;
     margin-left: 0px;
 }
-table{
-    width: 99%;
-    border-collapse: collapse;
+#first-table{
+    width: 100%;
+    border:none;
+    background: rgb(9, 9, 77);
 }
 td{
-    border: 1px solid #ddd;
+    border: none;
     flex-direction: column;
 }
-#video-data{
-    height: 650px;
-    width: 450px;
-}
 #links-data{
-    height: 650px;
-    width: 200px;
+    height: 450px;
+    width: 580px;
     font-weight: bold;
     font-size: 25px;
     background: rgb(9, 9, 77);
 }
 .data-link{
-    color: rgba(207, 34, 34, 0.753);
+    color: white;
 }
 .data-link:hover{
     color: orange;
@@ -493,3 +491,54 @@ td{
 #emailInput:focus + .subscribe-placeholder,
 #emailInput:not(:subscribe-placeholder-shown) + .subscribe-placeholder
 {top: -10px; font-size: 12px;}
+
+
+/*CSS for the about page*/
+.slideshow-container{
+    position: relative;
+}
+.mySlides{
+    display: none;
+}
+.mySlides img{
+    width: 100%;
+    height: 600px;
+}
+.fade{
+    animation: fade 1.5s;
+}
+@keyframes fade {
+    form{opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+.about-text-overlay{
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: #fff;
+}
+.about-text-overlay h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.about-text-overlay p{
+    font-size: 18px;
+}
+.homepage-link, .about-link{
+    color: #fff;
+    text-decoration: none;
+}
+.homepage-link:hover, .about-link:hover{
+    color: orange;
+}
+@media (max-width: 600px){
+    .about-text-overlay h2{
+        font-size: 28px;
+    }
+    .about-text-overlay p{
+        font-size: 16px;
+    }
+}
