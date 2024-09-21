@@ -441,6 +441,9 @@ td{
     text-decoration: none;
     color: #fff;
 }
+.useful-data:hover, #phone-number:hover{
+color: orange;
+}
 #phone{
     position: absolute;
     transform: translate(-30%, -15%);
@@ -587,10 +590,12 @@ td{
     font-weight: bold;
     font-size: 36px;
     text-align: center;
+    color: red;
 }
 #headline-text{
     font-size: 20px;
     text-align: center;
+    color: rgb(11, 11, 110);
 }
 .mission-container{
     grid-template-columns: repeat(2, 570px);
@@ -675,3 +680,79 @@ td{
         grid-template-columns: 1fr;
     }
 } 
+
+/* CSS For Partnership*/
+.partner-container{
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+h1{
+    text-align: center;
+}
+.payment-methods{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.payment-method{
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 100%;
+}
+.payment-method:hover{
+    background-color: #f0f0f0;
+}
+#partnershipForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="number"] {
+    padding: 10px;
+    width: calc(100%-22px);
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.partner{
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+}
+.partner:hover{
+background-color: #218838;
+}
+.confirmation{
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+@media (max-width: 600px){
+    .payment-method{
+        margin: 10px 0;
+    }
+    .partner{
+        width: 100%;
+    }
+}
