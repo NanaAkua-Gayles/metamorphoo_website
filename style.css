@@ -1,9 +1,7 @@
 /*CSS for the JOIN US FORM*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "poppins", sans-serif;
+
+*body{
+    font-style: calibri;
 }
 .form{
     background-color: #c9d6ff;
@@ -100,7 +98,6 @@ input:focus~label,input:not(:placeholder-shown)~label{
     cursor: pointer;
     border: 1px solid transparent;
     border-bottom: none;
-    background: #f1f1f1;
     font-weight: bold;
 }
 .tab-link{
@@ -158,6 +155,7 @@ input:focus~label,input:not(:placeholder-shown)~label{
     padding: 15px;
     margin-top: 5px;
     margin-left: 0px;
+    background-color: rgb(11, 11, 110);
 }
 #first-table{
     width: 100%;
@@ -216,6 +214,7 @@ td{
     height: 500px;
     width: fill;
     border: none;
+    background-color: rgb(11, 11, 110);
 }
 #department-teaser{
     text-align: left;
@@ -282,7 +281,7 @@ td{
     display: flex;
     flex-direction: column;
     width: 80%;
-    max-width: 800px;
+    max-width: 600px;
 }
 .row{
     display: flex;
@@ -344,10 +343,9 @@ td{
     border-collapse: none;
 }
 .excerpts{
-    border: 1px solid #ccc;
     padding: 10px;
     height: 400px;
-    width: 400px;
+    width: auto;
 }
 .text-box{
     height: 650px;
@@ -380,6 +378,11 @@ td{
 .excerpts-button:hover{
     background-color: #07001f;
 }
+#img-excerpt{
+    display: absolute;
+    height: 25rem;
+    width: 25rem;
+}
 .excerpts-link{
     color: #fff;
     text-decoration: none;
@@ -391,7 +394,7 @@ td{
     background-color: #07001f;
     color: rgb(69, 69, 240);
 }
-.excerpts1{
+.excerpt-details{
     text-align: center;
     font-weight: bold;
 }
@@ -460,6 +463,7 @@ color: orange;
     background-color: red;
     text-align: center;
     color: white;
+    padding: 10px;
 }
 #useful-links-table{
     padding: 5px;
@@ -593,16 +597,16 @@ color: orange;
     color: red;
 }
 #headline-text{
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     color: rgb(11, 11, 110);
 }
 .mission-container{
-    grid-template-columns: repeat(2, 570px);
-    grid-template-rows: repeat(3, 570px);
+    grid-template-columns: repeat(3, 400px);
     padding: 10px;
     display: grid;
     justify-content: center;
+    gap: 20px;
 }
 .mission-item{
     padding: 20px;
@@ -632,8 +636,9 @@ color: orange;
     background-color: chocolate;
     justify-content: center;
     width: 100%;
-    height: 400px;
-    padding: 40px;
+    height: 100%;
+    padding: 10px;
+    position: relative;
 }
 #wwu-headline{
     font-size: 34px;
@@ -668,31 +673,61 @@ color: orange;
     margin-left: 70px;
 }
 .wwu-photo{
-    height: 455px;
-    width: 300px;
+    height: 110%;
+    width: 20%;
     position: absolute;
-    transform: translate(285%, -79%);
     padding: 5px;
     background-color: chocolate;
+    pointer-events: none;
+    top: 50px;
+    right: 240px;
+    transform: translate(40%, -20%);
 }
 @media (max-width:600px) {
     .mission-container{
         grid-template-columns: 1fr;
+        font-size: larger;
     }
 } 
 
 /* CSS For Partnership*/
+#metamorphoo-logo{
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+#homepage-link{
+    color: orange;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-left: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+#partnership-link{
+    color: rgb(236, 183, 8);
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-left: 10px;
+    font-weight: bold;
+}
+#homepage-link:hover, #partnership-link:hover{
+    color: rgb(11, 11, 110);
+}
+#blessings{
+    text-align: center;
+    color: red;
+}
 .partner-container{
     max-width: 800px;
     margin: 40px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
+    padding: 35px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: red;
 }
-h1{
-    text-align: center;
+#preffered-method{
+    font-size: 1.5rem;
+    color: orange;
 }
 .payment-methods{
     display: flex;
@@ -702,41 +737,35 @@ h1{
 .payment-method{
     margin: 10px;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid orange;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
     width: 100%;
-    max-width: 100%;
-}
-.payment-method:hover{
-    background-color: #f0f0f0;
-}
-#partnershipForm{
-    margin-top: 20px;
+    box-shadow: 15px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-input[type="number"] {
-    padding: 10px;
-    width: calc(100%-22px);
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+#mobilemoney-image{
+    display: absolute;
+    height: 5rem;
+    width: 8rem;
 }
-.partner{
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 150px;
+#bank-image{
+    display: absolute;
+    height: 5rem;
+    width: 8rem;
 }
-.partner:hover{
-background-color: #218838;
+#mastercard-image{
+    display: absolute;
+    height: 5rem;
+    width: 8rem;
+}
+#payment-text{
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 30px;
 }
 .confirmation{
     display: none;
@@ -747,6 +776,54 @@ background-color: #218838;
     border: 1px solid #c3e6cb;
     border-radius: 5px;
     text-align: center;
+}
+@media (max-width: 600px){
+    .payment-method{
+        margin: 10px 0;
+    }
+    .partner{
+        width: 100%;
+    }
+}
+.momo-container{
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 10 10 100px #f0f0f0;
+    background-color: #fff;
+}
+h1{
+    text-align: center;
+    color: orange;
+}
+#preffered-mode{
+    font-size: 1.5rem;
+    color: orange;
+}
+.payment-modes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+.payment-mode{
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 35px;
+}
+.MobileMoney-Partnership{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 @media (max-width: 600px){
     .payment-method{

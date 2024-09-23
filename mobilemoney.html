@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Payment Details</h1><hr><br>
+    <div class="momo-container">
+        <p id="preffered-mode">Select Payment Mode:</p><br><br>
+        <div class="payment-modes">
+            <div class="payment-mode">
+        <label><input type="checkbox" name="payment mode" value="Momo">
+            <img src="">
+        </label>
+            </div>
+            <div class="payment-mode">
+            <label><input type="checkbox" name="payment mode" value="Momo">
+         <img src="">
+            </label>
+            </div>
+            <div class="payment-mode">
+                <label><input type="checkbox" name="payment mode" value="Momo">
+                    <img src="">
+                </label>            
+            </div>
+        </div>
+        <form id="MobileMoney-Partnership" action="server_endpoint" method="post">
+            <label for="phone-number" >Enter Phone Number</label>
+            <input type="phone-number" id="phone-number" name="phone-number" 
+            required placeholder="Enter Phone Number">
+            <div class="error" id="errorMessage">Please select a payment mode.</div>
+            <button type="submit">Partner Now</button>
+        </form>
+</body>
+</html>
