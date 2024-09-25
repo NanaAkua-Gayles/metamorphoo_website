@@ -1,111 +1,29 @@
-/*CSS for the JOIN US FORM*/
-
-*body{
-    font-style: calibri;
-}
-.form{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-}
-.container{
-    background: #fff;
-    width: 450px;
-    padding: 1.5rem;
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 0 20px 35px rgb(136, 40, 40);
-}
-form{
-    margin:0 2rem;
-}
-.form-title{
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 1.3rem;
-    margin-bottom: o.4rem;
-}
-input{
-    color: inherit;
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #757575;
-    padding-left: 1.5rem;
-    font-size: 15px;
-}
-.input-group{
-    padding: 1% 0;
-    position: relative;
-}
-.input:focus{
-    background-color: transparent;
-    outline: transparent;
-    border-bottom: 2px solid hsl(327, 90%, 28%);
-}
-input::placeholder{
-    color: transparent;
-}
-label{
-    color: #757575;
-    position: relative;
-    left: 1.2rem;
-    top: -1.3em;
-    cursor: auto;
-    transition: 0.3s ease all;
-}
-input:focus~label,input:not(:placeholder-shown)~label{
-    top: -2.5em;
-    color: rgb(197, 151, 52);
-    font-size: 15px;
-}
-.btn{
-    font-size: 1.1rem;
-    padding: 8px 0;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    width: 100%;
-    background: rgb(235, 125, 125);
-    color: white;
-    cursor: pointer;
-    transition: 0.9s;
-}
-.btn:hover{
-    background: #07001f;
-}
-.subtitle{
-    text-align: center;
-    font-size: 1.0rem;
-    font-weight: bold;
-    color: rgb(235, 125, 125);
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 /*CSS for the HOME PAGE*/
-
-
 .homecontainer{
     display: flex;
     position: absolute;
-    top: 5px;
-    right: 40px;
-    border-bottom: 0px;
-    margin: 20px;
+    top: 0px;
+    right: 0;
+    margin: 1rem;
+    max-width: 800px;
+    width: auto;
+    height: auto;
+    font-size: 1em;
 }
 .tab{
     padding: 10px;
     cursor: pointer;
-    border: 1px solid transparent;
     border-bottom: none;
     font-weight: bold;
 }
 .tab-link{
     text-decoration: none;
+    color: blue;
 }
 .tab-link:hover{
-    background-color:none;
-    color: #9daaf2;
+    background-color: none;
+    color: orange;
 } 
 .joinus-button{
     color: blue;
@@ -113,13 +31,10 @@ input:focus~label,input:not(:placeholder-shown)~label{
     font-weight: bold;
     padding: 1px 1px;
     transition: background-color 0.3s;
-    border-radius: 15px;
-    border-color: rgb(77, 77, 199);
+    border-radius: 10px;
+    border-color: blue;
+    height: 2rem;
 }
-.joinus-button:hover{
-    background-color: #f1f1f1;
-    color: blue;
-} 
 .joinus-link{
     color: blue;
     text-decoration: none;
@@ -131,8 +46,13 @@ input:focus~label,input:not(:placeholder-shown)~label{
 }
 .joinus-link:hover{
     background-color:none;
-    color: #9daaf2;
+    color: orange;
 } 
+@media (max-width: 600px) {
+    .homecontainer{
+        font-size: 0.8em;
+    }
+}
 #headline{
     font-size: 30px;
     font-family: Tahoma;
@@ -248,7 +168,7 @@ td{
     margin-left: 40px;   
 }
 .department-button{
-    padding: 10px 20px;
+    padding: 10px 10px;
     background: rgba(255, 166, 0, 0.918);
     color: #fff;
     border: none;
@@ -257,6 +177,7 @@ td{
     font-size: 16px;
     transition: background-color 0.3s;
     margin-left: 40px;
+    margin-bottom: 50px;
 }
 .department-button:hover{
     background-color: #07001f;
@@ -597,7 +518,7 @@ color: orange;
     color: red;
 }
 #headline-text{
-    font-size: 25px;
+    font-size: 1.5rem;
     text-align: center;
     color: rgb(11, 11, 110);
 }
@@ -668,7 +589,7 @@ color: orange;
     transition: background-color 0.3s;
 }
 .wwu-text{
-    font-size: 20px;
+    font-size: 1.4rem;
     color: #fff;
     margin-left: 70px;
 }
@@ -687,12 +608,15 @@ color: orange;
     .mission-container{
         grid-template-columns: 1fr;
         font-size: larger;
+        }
+        #headline-text{
+            font-size: 1.3rem;
     }
 } 
 
 /* CSS For Partnership*/
 #metamorphoo-logo{
-    display: flex;
+    display: relative;
     height: auto;
     width: 100%;
 }
@@ -705,14 +629,14 @@ color: orange;
     font-weight: bold;
 }
 #partnership-link{
-    color: rgb(236, 183, 8);
+    color: orange;
     text-decoration: none;
     font-size: 1.4rem;
     margin-left: 10px;
     font-weight: bold;
 }
 #homepage-link:hover, #partnership-link:hover{
-    color: rgb(11, 11, 110);
+    color: red;
 }
 #blessings{
     text-align: center;
@@ -724,10 +648,11 @@ color: orange;
     padding: 35px;
     border-radius: 10px;
     background-color: red;
+    box-shadow: 50px #fff;
 }
 #preffered-method{
-    font-size: 1.5rem;
-    color: orange;
+    font-size: 1.7rem;
+    color: #fff;
 }
 .payment-methods{
     display: flex;
@@ -741,8 +666,9 @@ color: orange;
     border-radius: 10px;
     cursor: pointer;
     width: 100%;
-    box-shadow: 15px;
+    box-shadow: 75px;
     display: flex;
+    background-color: orange;
 }
 #mobilemoney-image{
     display: absolute;
@@ -761,7 +687,7 @@ color: orange;
 }
 #payment-text{
     text-decoration: none;
-    color: orange;
+    color: red;
     font-weight: bold;
     font-size: 1.3em;
     text-align: center;
@@ -832,4 +758,113 @@ h1{
     .partner{
         width: 100%;
     }
+}
+/*CSS for the JOIN US FORM*/
+.wwu-heading{
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+    transform: translate(30%, -80%);
+    color: #fff;
+    font-size: 50px;
+}
+@media (max-width: 600px){
+    .wwu-heading{
+        font-size: 18px;
+        bottom: 68%;
+    }
+}
+#to-home{
+    color: orange;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-left: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+#in-wwu{
+    color: orange;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-left: 10px;
+    font-weight: bold;
+}
+#to-home:hover, #in-wwu:hover{
+    color: red;
+}
+.container{
+    background: #fff;
+    width: auto;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px red;
+    max-width: 600px;
+}
+form{
+    margin:0 2rem;
+}
+.form-spotLight{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: o.4rem;
+    color: red;
+}
+input{
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding-left: 1.5rem;
+    font-size: 15px;
+}
+.input-group{
+    padding: 1% 0;
+    position: relative;
+}
+.input:focus{
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid red;
+}
+input::placeholder{
+    color: transparent;
+}
+label{
+    color: #757575;
+    position: relative;
+    left: 1.2rem;
+    top: -1.3em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+input:focus~label,input:not(:placeholder-shown)~label{
+    top: -2.5em;
+    color: orange;
+    font-size: 15px;
+}
+.btn{
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: red;
+    color: white;
+    cursor: pointer;
+    transition: 0.9s;
+}
+.btn:hover{
+    background: orange;
+}
+.subtitle{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: red;
+    font-family: calibri;
 }
