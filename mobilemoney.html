@@ -3,35 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mobile Money Platform</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Payment Details</h1><hr><br>
     <div class="momo-container">
-        <p id="preffered-mode">Select Payment Mode:</p><br><br>
-        <div class="payment-modes">
-            <div class="payment-mode">
-        <label><input type="checkbox" name="payment mode" value="Momo">
-            <img src="">
-        </label>
-            </div>
-            <div class="payment-mode">
-            <label><input type="checkbox" name="payment mode" value="Momo">
-         <img src="">
+    <p id="paymentMomo">Metamorphoo Payment Details</p>
+    <p>Check a payment option</p><br>
+    <div class="momo-grid">
+        <div class="momo-item">
+            <label>
+                <input type="checkbox" name="momo-partnership" value="option 1">
+                <img src="momo.PNG" id="momo-image">
             </label>
-            </div>
-            <div class="payment-mode">
-                <label><input type="checkbox" name="payment mode" value="Momo">
-                    <img src="">
-                </label>            
-            </div>
         </div>
-        <form id="MobileMoney-Partnership" action="server_endpoint" method="post">
-            <label for="phone-number" >Enter Phone Number</label>
-            <input type="phone-number" id="phone-number" name="phone-number" 
-            required placeholder="Enter Phone Number">
-            <div class="error" id="errorMessage">Please select a payment mode.</div>
-            <button type="submit">Partner Now</button>
-        </form>
+        <div class="momo-item">
+            <label>
+                <input type="checkbox" name="momo-partnership" value="option 2">
+                <img src="voda.JPG" id="voda-image">
+            </label>
+        </div>
+        <div class="momo-item">
+            <label>
+                <input type="checkbox" name="momo-partnership" value="option 3">
+                <img src="at.JPG" id="at-image">
+            </label>
+        </div>
+        </div> <br><br><br>
+        <div class="momo-form-group">
+            <label for="partnershipType">Choose the kind of Partnership:</label>
+            <select id="partnershipType" name="partnershipType">
+                <option value="faithgift">Faith Gift</option>
+                <option value="specialpartnership">Special Partnership</option>
+                <option value="tithe">Tithe</option>
+            </select><br><br>
+        </div>
+        <div class="momo-form-group">
+            <label for="phoneNumber">Phone Number:</label><br><br>
+            <input type="text" id="phoneNumber" name="phoneNumber"
+             placeholder="Enter your phone number" required>
+        </div>
+        <button class="PartnerNow">Partner Now</button>
+    </div>
 </body>
 </html>

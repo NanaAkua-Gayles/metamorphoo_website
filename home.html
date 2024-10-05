@@ -5,39 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="home">
-    <div class="homecontainer">
-        <div class="tab"><a href="home.html" class="tab-link">HOME </a></div>        
-        <div class="tab"><a href="about.html" class="tab-link">ABOUT </a></div>
-        <div class="tab"><a href="excerpts.html"class="tab-link" >EXCERPTS </a></div>
-        <div class="tab"><a href="partner.html" class="tab-link">PARTNER</a></div>
-        <button class="joinus-button"><a href="joinus.html" class="joinus-link">JOIN US </a></button>
-        </div><br><br><br><br>
+<body>
+    <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+    </label>
+    <input type="checkbox" id="menu-toggle"/>
+    <nav id="dashboard-menu" class="dashboard-menu">
+        <div>            
+            <p><a href="home.html"  class="dashboard-list">HOME</a></p>       
+            <p><a href="about.html"  class="dashboard-list">ABOUT</a></p>
+            <p><a href="excerpts.html" class="dashboard-list">EXCERPTS</a></p>
+            <p><a href="partner.html" class="dashboard-list">PARTNER</a></p>
+            <p><a href="joinus.html" class="dashboard-list">JOIN US </a></p>
+        </div>
+    </nav>
+
+    <nav class="nav-links">
+        <ul>            
+            <li><a href="home.html">HOME</a></li>       
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="excerpts.html">EXCERPTS</a></li>
+            <li><a href="partner.html">PARTNER</a></li>
+            <li><a href="joinus.html">JOIN US </a></li>
+        </ul>
+    </nav>
+<br><br>
 <p id="headline">METAMORPHOO</p><hr id="horizontal-rule"><br><br>     
                         <br>
 <p id="headline1"><b>WHAT'S NEW? WATCH TO FIND OUT!</b></p>
         <div class="table-container">
-            <table id="fist-table">
-                <tr>
-                    <td id="video-data">
-                        <video width="905" controls autoplay loop muted>
+                    <div id="video-data">
+                        <video width=100% height=100% controls loop muted>
                         <source src="vid1.MP4" type="video/MP4">
-                        </video></td>
-                    <td id="links-data"><p><a href="about.html" class="data-link">NEW TO METAMORPHOO?</a></p><br>
-                        <p><a href="departments.html" class="data-link">JOIN A DEPARTMENT</a></p> <br>
-                        <p><a href="events.html" class="data-link">UPCOMING EVENTS</a></p><br>
-                        <p><a href="partner.html" class="data-link">PARTNER</a></p></td>
-                    </tr>
-            </table>
+                        </video>
+                    </div>
+                    <div id="table-data">
+                       <p class="link-data"><a href="about.html" class="data-link">NEW TO METAMORPHOO?</a></p>
+                       <p class="link-data"><a href="departments.html" class="data-link">JOIN A DEPARTMENT</a></p>
+                        <p class="link-data"><a href="events.html" class="data-link">UPCOMING EVENTS</a></p>
+                        <p class="link-data"><a href="partner.html" class="data-link">PARTNER</a></p>
+                    </div>
         </div>
-        <br><br><br><br><br>
-        <p id="headline3">WHAT WE DO</p><br><br>
+        <br><br><br><br>
+        <p id="headline3">WHAT WE DO</p><br>
         <p id="headline4">Welcome To Metamorphoo</p>
-        <br><br><br>
+        <br><br>
         <div class="what-we-do">
             <div class="content">
                 <img src="pin.PNG" class="pin">
-                <p><b>KINGDOM MASTERY</b></p><br>
+                <p><b>KINGDOM MASTERY</b></p>
                 <p>We are reaching souls at all
                     cost by Grace and raising them as 
                     heirs of God and masters of the world.
@@ -47,7 +65,7 @@
             </div>
             <div class="content">
                 <img src="pin.PNG" class="pin">
-                <p><b>SPIRITUAL AWAKENING</b></p><br>
+                <p><b>SPIRITUAL AWAKENING</b></p>
                 <p>All will walk in the consciousness
                     of Christ and not denominationalism.</p>
                     <p>Making people to be Christ-occupied
@@ -56,7 +74,7 @@
             </div>
             <div class="content">
                 <img src="pin.PNG" class="pin">
-                <p><b>WORD EMPOWERMENT</b></p><br>
+                <p><b>WORD EMPOWERMENT</b></p>
                 <p>Through the adminstration of the Word
                 of Grace and ministry of righteousness,
                 people will function as reigning kings
@@ -64,10 +82,10 @@
             </p>
             </div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
                 <table id="table2">
-                <tr>
+                <tr class="table-row">
                 <td>
                     <img src="Department.jpeg" id="department-photo">
                     <div class="overlay-text"><span style="color: rgba(255, 166, 0, 0.918);">
@@ -77,7 +95,7 @@
                     </div>
             </td>
                     <td id="department-teaser"><p id="teaser-headline">Find your fit - Explore our 
-                        <br>departments</p><br>
+                        <br>departments</p>
                     <p id="teaser-text"><strong><span style="color: rgba(255, 166, 0, 0.918);">
                         Serve with heart and connect with purpose!</span></strong><br>
                         Awaken your spiritual potential by finding 
@@ -95,58 +113,54 @@
                     <button class="department-button"><a href="department.html" class="department-link">JOIN A DEPARTMENT</a></button>
                 </tr>
                 </table>
-            </div><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br>
 
-            <p id="podcast-heading">Metamorphoo Podcasts</p><br><br>
+            <p id="podcast-heading">Metamorphoo Podcasts</p>        
             <p id="podcast-content">
                 Listen to words of knowledge from our set Man of God, Apostle
                 Bennie on topics such as the New Creation, Priesthood,
                  Sin, Faith, The Holy Spirit and More. <br><br>
                  There can't be true transformation without the knowledge of God. Be Transformed!<br><br>
-            </p><br>
-            <div class="podcast-container-body">
+            </p><br><br>
+            <div class="podcast-wrapper">
             <div class="podcast-container">
-                <div class="row">
-                    <div class="column">
-                        <img src="play.PNG" id="playicon"><br><br>
-                        The Spirit of Life <br><br>
+                    <div class="podcast">
+                        <img src="play.PNG" id="playicon">
+                        <p class="podcast-title">The Spirit of Life</p>
                         <a href="spirit.html" id="listen-link">Listen Now</a>
                     </div>
-                    <div class="column">                        
-                        <img src="play.PNG"  id="playicon"><br><br>
-                        The Spirit of Life <br><br>
-                        <a href="spirit.html">Listen Now</a>
+                    <div class="podcast">                        
+                        <img src="play.PNG"  id="playicon">
+                        <p class="podcast-title">The Spirit of Life </p>
+                        <a href="spirit.html" id="listen-link">Listen Now</a>
                     </div>
-                    <div class="column">
-                        <img src="play.PNG"  id="playicon"><br><br>
-                        The Spirit of Life <br><br>
-                        <a href="spirit.html">Listen Now</a>
+                    <div class="podcast">
+                        <img src="play.PNG"  id="playicon">
+                        <p class="podcast-title">The Spirit of Life </p>
+                        <a href="spirit.html" id="listen-link">Listen Now</a>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="column">
-                        <img src="play.PNG"  id="playicon"><br><br>
-                        The Spirit of Life <br><br>
-                        <a href="spirit.html">Listen Now</a>
+                    <div class="podcast">
+                        <img src="play.PNG"  id="playicon">
+                        <p class="podcast-title">The Spirit of Life </p>
+                        <a href="spirit.html" id="listen-link">Listen Now</a>
                     </div>
-                    <div class="column">
-                        <img src="play.PNG" id="playicon"><br><br>
-                        The Spirit of Life <br><br>
-                        <a href="spirit.html">Listen Now</a>
+                    <div class="podcast">
+                        <img src="play.PNG" id="playicon">
+                        <p class="podcast-title">The Spirit of Life </p>
+                        <a href="spirit.html" id="listen-link">Listen Now</a>
                     </div>
-                    <div class="column">
-                        <img src="play.PNG"  id="playicon"><br><br>
-                        The Spirit of Life <br><br>
-                        <a href="spirit.html">Listen Now</a>
-                    </div>
-                </div>
+                    <div class="podcast">
+                        <img src="play.PNG"  id="playicon">
+                        <p class="podcast-title">The Spirit of Life</p>
+                        <a href="spirit.html" id="listen-link">Listen Now</a>
             </div>
-            </div><br><br><br>
+            </div>
+        </div><br><br><br>
                 
                 <button class="podcast-button">
                     <a href="podcast.html" class="podcast-link">MORE PODCASTS</a></button> <br><br>
                             <br><br><br><br>
+                            
            <table id="excerpts-table">
             <tr>
                 <td rowspan="2" class="text-box">
@@ -209,10 +223,9 @@
         </div>
         
            <table class="end">
-            <tr>
-                <td>
-                    <td class="end-column1">
-                        <p id="end-headers">Follow Us</p><br>
+            <tr id="more-info-table">
+                    <td class="end-column">
+                        <p id="end-headers">Follow Us</p><br><br><br><br><br><br><br><br><br>
                         <ul class="social-links">
                         <li><a href="" target="_blank">
                             <img src="instagram.PNG" id="facebook-logo"></a></li>
@@ -224,8 +237,8 @@
                             <img src="youtube.PNG" id="facebook-logo"></a></li>
                     </ul>
                     </td>
-                    <td class="end-column2"> 
-                        <p id="end-headers">Useful Links</p><br>
+                    <td class="end-column"> 
+                        <p id="end-headers">Useful Links</p><br><br><br><br><br><br>
                         <div id="useful-links-table">
                                 <li><a href="home.html" class="useful-data">Home</a></li> 
                                  <li><a href="department.html" class="useful-data">Departments</a></li> 
@@ -235,7 +248,7 @@
                                 <li><a href="partner.html" class="useful-data">Partner</a></li> 
                         </div>
                      </td>
-                    <td class="end-column3">
+                    <td class="end-column">
                         <p id="end-headers">Contacts Us</p> <br>
                         <p id="contact-us">Contact Us</p>
                             <img src="phone.PNG" id="phone">
@@ -245,11 +258,11 @@
                             <img src="location1.PNG" id="location-photo">
                         SRC Union Building <br>
                         University Of Ghana, Legon.</p>
-                    </td>
-                </td>
+                        </td>
             </tr>
            </table>
            <footer><p id="footer">Metamorphoo 2024 &copy; All rights reserved.</p>
            </footer>
+<script src="script.js"></script>
 </body>
 </html>  
