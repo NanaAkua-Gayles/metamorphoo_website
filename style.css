@@ -34,8 +34,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 50%;
-    height: 150vh;
+    width: 20%;
+    height: 100%;
     background-color: red;
     z-index: 1;
     padding: 50px 10px;
@@ -121,7 +121,7 @@
 }
 
 #horizontal-rule{
-    border-color: rgb(0, 174, 255);
+    border-color: rgb(255, 0, 0);
 }
 .table-container{
     display: grid;
@@ -272,6 +272,7 @@
         text-align: left;
         background: rgb(11, 11, 110);
         margin-left: 0;
+        height: 65vh;
 }
     #teaser-headline{
     font-family: Calibri;
@@ -283,19 +284,14 @@
     margin-left: 10px;
 }
 .department-button{
-    padding: 10px 10px;
-    background: rgba(255, 166, 0, 0.918);
-    color: #fff;
-    border: none;
+    padding: 5px;
     border-radius: 20px;
-    cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
-    margin-left: 100px;
-    margin-top: -50px;
+    margin-left: 20%;
 }
     .overlay-text{
-    transform: translate(125%, -120%);
+    transform: translate(50%, -110%);
+    padding-top: 5px;
 }
 }
 .podcast-wrapper{
@@ -382,6 +378,7 @@
     }
     .podcast-button{
     width: 70%;
+    margin-top: -22%;
     }
 }
 .excerpts-table{
@@ -475,36 +472,65 @@
     font-size: 2rem;
     position: relative;
 }
+.follow-us{
+    position: relative;
+    margin-top: -10px;
+    transform: translate(0, -100px);
+}
 .social-links{
     list-style-type: none;
+    grid-template-columns: repeat(4, 1fr);   
     position: relative;
-    transform: translate(-20%, -280%);
+    transform: translate(-20%, 10%);
 }
 .social-links li{
     display: inline;
     padding: 8px;
 }
-#facebook-logo{
+#youtube{
     position: relative;
     height: 3rem;
     width: 3rem;
+    transform: translate(-20%, 5%);
 }
-#contact-us, #locate-us{
+#IG{
+    position: relative;
+    height: 2.7rem;
+    width: 3rem;
+}
+#whatsapp{
+    position: relative;
+    height: 2.5rem;
+    width: 3rem;
+    transform: translate(-20%, -5%);
+}
+#facebook{
+    position: relative;
+    height: 3.5rem;
+    width: 4rem;
+    transform: translate(-10%, 10%);
+}
+.contactUs{
+    position: relative;
+    margin-top: -10px;
+}
+#contact-us{
     margin-left: 30px;
+    margin-top: 60px;
 }
-#phone-number{
+#locate-us{
+    margin-left: 30px;
+    margin-top: 60px;
+}
+#phone-number, #venue{
     margin-left: 30px;
     text-decoration: none;
     color: white;
 }
-#useful-links-table{
-    transform: translate(-5%, -57%);
-    position: relative;
-}
 .useful-data{
     text-decoration: none;
     color: #fff;
-    padding: 10px;
+    line-height: 10vh;
 }
 .useful-data:hover, #phone-number:hover{
 color: orange;
@@ -517,7 +543,7 @@ color: orange;
 }
 #location-photo{
     position: absolute;
-    transform: translate(-100%, -20%);
+    transform: translate(-30%, -20%);
     height: 3.5rem;
     width: 3rem;
 }
@@ -525,16 +551,57 @@ color: orange;
     #more-info-table{
         flex-direction: column;
     }
-    .social-links{
-        top: 50%;
-        transform: translate(-20%, -400%);
+    #end-headers{
+        font-size: 1.5rem;
     }
-}
+    .follow-us{
+        margin-top: 10px;
+        transform: translate(-6%, -10%);
+        margin-bottom: -92px;
+    }
+    .social-links{
+        transform: translate(-17%, -15%);
+    }
+    .useful-data{
+        line-height: 0%;
+        font-size: 1.2rem;
+    }
+    .contactUs{
+        margin-top: -50px;
+        margin-left: 10px;
+        transform: translate(-16%, 0);
+    }
+    #contact-us{
+        margin-left: 0px;
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+    #phone-number{
+        font-size: 1.2rem;
+    }
+    #locate-us{
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+    #phone{
+        position: absolute;
+        transform: translate(-20%, 20%);
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    #location-photo{
+        transform: translate(-20%, -15%);
+        height: 3.5rem;
+        width: 3rem;
+    }
+    }
 #footer{
     background-color: red;
     text-align: center;
     color: white;
     padding: 10px;
+    margin-top: 0;
 }
 #useful-links-table{
     padding: 5px;
@@ -543,19 +610,17 @@ color: orange;
     grid-template-rows: 1fr 1fr 1fr;
     row-gap: 50px;
 }
-#wrapper-id{
-    margin-left: 200px;
-    margin-bottom: -5px;
-}
 .subscription-wrapper{
-    width: 900px;
-    height: 120px;
+    width: 65vw;
+    height: 15vh;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(11, 11, 110);
     border-radius: 70px;
+    margin-left: 200px;
+    margin-bottom: -5px;
 }
 .wrapper-text{
     margin-right: 40px;
@@ -611,6 +676,24 @@ color: orange;
 #emailInput:not(:subscribe-placeholder-shown) + .subscribe-placeholder
 {top: -10px; font-size: 12px;}
 
+@media (max-width:768px) {
+    .subscription-wrapper{
+        width: 80vw;
+        height: 8vh;
+        padding: 20px;
+        margin-left: 8px;
+        margin-bottom: -20px;
+}
+.subscription-container{
+    width: 150vw;
+    height: 4vh;
+}
+#subscribe-button{
+        width: 27vw;
+        height: 44px;
+}
+}
+
 
 /*CSS for the about page*/
 .slideshow-container{
@@ -624,7 +707,7 @@ color: orange;
     height: 600px;
 }
 .fade{
-    animation: fade 1.5s;
+    animation: fade 2s;
 }
 @keyframes fade {
     form{opacity: 0.4;}
@@ -654,23 +737,62 @@ color: orange;
     color: orange;
 }
 @media (max-width: 600px){
+    .about-text-overlay{
+        bottom: 5%;
+        left: 33%;
+        transform: translate(-50%, 0);
+    }
     .about-text-overlay h2{
-        font-size: 28px;
+        font-size: 2em;
     }
     .about-text-overlay p{
-        font-size: 16px;
+        font-size: 1.5em;
     }
 }
 #about-headline{
     font-weight: bold;
-    font-size: 36px;
+    font-size: 2.5em;
     text-align: center;
     color: red;
+    padding: 10px;
+    margin-top: 5%;
 }
 #headline-text{
     font-size: 1.5rem;
     text-align: center;
     color: rgb(11, 11, 110);
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+.beTransformed{
+    position: relative;
+    background: rgba(255, 166, 0, 0.918);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    width: 20vw;
+    height: 7vh;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    margin-bottom: 10%;
+}
+.beTransformed:hover{
+    background-color: #07001f;
+}
+@media (max-width:769px) {
+    #about-headline{
+        font-weight: bold;
+        font-size: 36px;
+        margin-top: 40%;
+    }
+    .beTransformed{
+        width: 80vw;
+        height: 6vh;
+        transform: translate(-50%, -40%);
+    }
 }
 .mission-container{
     grid-template-columns: repeat(3, 400px);
@@ -678,6 +800,7 @@ color: orange;
     display: grid;
     justify-content: center;
     gap: 20px;
+    margin-bottom: 20%;
 }
 .mission-item{
     padding: 20px;
@@ -704,12 +827,15 @@ color: orange;
     border-radius: 15px;
 }
 .worship-with-us-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     background-color: chocolate;
     justify-content: center;
     width: 100%;
     height: 100%;
     padding: 10px;
     position: relative;
+    margin-top: 10%;
 }
 #wwu-headline{
     font-size: 34px;
@@ -743,26 +869,62 @@ color: orange;
     color: #fff;
     margin-left: 70px;
 }
-.wwu-photo{
-    height: 110%;
-    width: 20%;
-    position: absolute;
-    padding: 5px;
-    background-color: chocolate;
+.wwu-image{
+    position: relative;
+    transform: translate(30%, -26%);
     pointer-events: none;
-    top: 50px;
-    right: 240px;
-    transform: translate(40%, -20%);
+    margin-top: 20%;
+    margin-bottom: -50%;
+    height: 100vh;
 }
-@media (max-width:600px) {
+.wwu-photo{
+    height: 80vh;
+    width: 40%;
+    border: 5px solid chocolate;
+}
+@media (max-width:768px) {
     .mission-container{
         grid-template-columns: 1fr;
         font-size: larger;
         }
-        #headline-text{
+    #headline-text{
             font-size: 1.3rem;
     }
+    .worship-with-us-container{
+        grid-template-columns: 1fr;
+        margin-top: 30%;
+    }
+    #wwu-headline{
+        font-size: 2em;
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+    }
+    .wwu-text{
+        font-size: 1.5rem;
+        color: #fff;
+        margin-left: 0;
+    }
+    .wwu-photo{
+        height: 35vh;
+        width: 50vw;
+        border: none;
+        border-radius: 5px;
+    }
+    .wwu-image{
+        transform: translate(25%, -90%);
+        margin-top: 0;
+        margin-bottom: 5px;
+        height: auto;
+    }
+    .wwu-button{
+        margin-top: 30vh;
+        transform: translate(0%, 300%);
+        margin-bottom: 0%;
+        width: 70vw;
+    }
 } 
+
 
 /* CSS For Partnership*/
 #metamorphoo-logo{

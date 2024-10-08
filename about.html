@@ -16,6 +16,7 @@
             <img src="image4.jpeg"></div>
         <div class="mySlides fade">
             <img src="image5.jpeg"></div>
+
         <div class="about-text-overlay">
             <h2>Welcome To Metamorphoo</h2>
             <p>
@@ -23,19 +24,19 @@
                 <a href="about.html" class="about-link">ABOUT-US</a>
             </p>
         </div>
-    </div> <br><br><br><br><br>
+    </div> 
     <div class="about-news">
         <p id="about-headline">Experience The Power Of A Fiery Community</p><br>
         <p id="headline-text">We fuel your soul with electrifying messages that sparks your purpose 
-            and transforms your outlook. <br><br>
+            and transforms your outlook. <br>
             "Stop imitating the deals and opinions of the culture around you,
             but be inwardly transformed by the Holy Spirit <br>through a total
             reformation of how you think. <br>This will empower you to discern 
             God's will as you live a beautiful life, <br>satisfying and perfect in His eyes." 
             Romans 12:2(TPT)</p> <br>
-            <button class="podcast-button">
+            <button class="beTransformed">
                 <a href="podcast.html" class="podcast-link">BE TRANSFORMED</a></button>
-    </div><br><br><br> <br><br><br><br>
+    </div>
     <div class="mission-container">
         <div class="mission-item" ba>
             <p><b>OUR MISSION</b></p>
@@ -61,52 +62,21 @@
             <p></p>
         </div>
     </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
+    
         <div class="worship-with-us-container">
+            <div class="wwu-text-container">
           <p id="wwu-headline">Experience Jesus</p>
             <p class="wwu-text">In the hustle and bustle of everyday life, we often seek purpose and meaning.
             <br>What if the answers we're searching for are found in a simple encounter?<br><br>
             A moment with Jesus can change everything. <br> Experience His love, find your purpose
             and let your heart be renewed. <br><br>Are you ready to embrace the journey? </p>
-        <img src="image3.JPG" class="wwu-photo">
-        <button class="wwu-button">
+            <button class="wwu-button">
                 <a href="joinus.html" class="wwu-link">WORSHIP WITH US</a></button>
+            </div>
+            <div class="wwu-image">
+                <img src="image3.JPG" class="wwu-photo"></div>
         </div>
-        <br><br><br><br><br><br><br>
 
-         
-
-
-
-
-
-
-
-
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function showSlides(n) {
-            var i;
-            var slides = 
-document.getElementsByClassName("mySlides");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex-1].style.display = "block";
-            }
-
-            setInterval(function() {
-                slideIndex++;
-                if (slideIndex >
-document.getElementsByClassName("mySlides").length) {
-                    slideIndex = 1;           
-                }
-                showSlides(slideIndex);
-            }, 3000);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
