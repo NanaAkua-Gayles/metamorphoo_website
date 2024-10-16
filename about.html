@@ -19,12 +19,14 @@
 
         <div class="about-text-overlay">
             <h2>Welcome To Metamorphoo</h2>
-            <p>
-                <a href="home.html" class="homepage-link">HOME</a> |
-                <a href="about.html" class="about-link">ABOUT-US</a>
-            </p>
+            <div class="tabs">
+                <a href="home.html" id="tab-button active" class="tab-homepage" data-tab="home">HOME</a> |
+                <a href="about.html" id="tab-button" class="tab-about" data-tab="about">ABOUT-US</a>
+            </div>
+            <div id="content" class="tab-active"></div>
         </div>
     </div> 
+    
     <div class="about-news">
         <p id="about-headline">Experience The Power Of A Fiery Community</p><br>
         <p id="headline-text">We fuel your soul with electrifying messages that sparks your purpose 
@@ -77,6 +79,83 @@
                 <img src="image3.JPG" class="wwu-photo"></div>
         </div>
 
-    <script src="script.js"></script>
+    <script>
+
+        //JS for the about picture slide show
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function showSlides(n) {
+    var i;
+    var slides = 
+document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+    }
+
+    setInterval(function() {
+        slideIndex++;
+        if (slideIndex >
+document.getElementsByClassName("mySlides").length) {
+            slideIndex = 1;           
+        }
+        showSlides(slideIndex);
+    }, 3000);
+
+    
+document.addEventListener('DOMContentLoaded', function(){
+
+    //JS for indicating the current page among tabs
+    const contentDiv = 
+document.getElementById('content');
+    const tabButtons =
+document.querySelectorAll('.tab-button');
+    //Load the About Us content by default
+    loadContent('about.html');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            tabButtons.forEach(btn =>
+btn.classList.remove('active'));
+
+            button.classList.add('active');
+
+    const tabId = 
+button.getAttribute('data-tab');
+            if (tabId === 'home') {
+loadContent('home.html');
+            } else if (tabId==='about') {
+                loadContent('about.html');
+            }
+        });
+    });
+
+    function loadContent (url) {
+        fetch(url)
+        .then(response => { 
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+        })
+        .then(data => {
+            contentDiv.innerHTML = data;
+        })
+        .catch(error => {
+            contentDiv.innerHTML = 
+'<p>Error loading Content. </p>';
+            console.error('There was a problem with the fetch operation:', error);
+        });
+    }
+
+
+});
+
+
+    </script>
 </body>
 </html>

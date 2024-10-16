@@ -1,58 +1,96 @@
 /*CSS for the HOME PAGE*/
-#menu-toggle{
-    display: none;
-}
-.menu-icon{
-    display: block;
-    cursor: pointer;
+.header{
     position: fixed;
-    top: 10px;
-    left: 10px;
+    background-color: rgb(231, 118, 118);
+    padding: 2px;
+    top: 2%;
+    left: 0;
+    right: 0;
     z-index: 1000;
-    pointer-events: auto;
 }
-.menu-icon span{
-    display: block;
-    width: 23px;
-    height: 4px;
-    background-color: blue;
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: 0.4s;
+.ccc-logo{
+    margin-top: 15px;
+    width: 6rem;
+    margin-left: 10px;
 }
-#menu-toggle:checked + .menu-icon span:nth-child(1){
-    transform: translate(7px, 7px) rotate(45deg);
-}
-#menu-toggle:checked + .menu-icon span:nth-child(2){
-    opacity: 0;
-}
-#menu-toggle:checked + .menu-icon span:nth-child(3){
-    transform: translate(7px, -7px) rotate(-45deg);
-}
-.dashboard-menu{
+.menu-toggle{
     display: none;
+}
+.hamburger{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    z-index: 1000;
+    position: fixed;
+    pointer-events: auto;
+    right: 20px;
+}
+.bar{
+    height: 4px;
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    border-radius: 2px;
+}
+.menu{
+    display: none;
+    flex-direction: column;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 20%;
+    right: 0;
+    width: 30%;
     height: 100%;
     background-color: red;
     z-index: 1;
     padding: 50px 10px;
 }
-.dashboard-list{
+.menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li{
+    text-align: center;
+    padding: 10px 0;
+}
+.menu a{
     display: flex;
     text-decoration: none;
     color: #fff;
     font-style: bold;
-    font-size: 20px;
-    padding: 30px 50px;
+    font-size: 1.2rem;
+    padding: 30px 30px;
+    text-wrap: nowrap;
+}
+.menu a:hover{
+    color: orange;
+}
+.menu-toggle:checked + .hamburger .bar:nth-child(1){
+    transform: rotate(45deg) translate(5px, 9px);
+}
+.menu-toggle:checked + .hamburger .bar:nth-child(2){
+    opacity: 0;
+}
+.menu-toggle:checked + .hamburger .bar:nth-child(3){
+    transform: rotate(-45deg) translate(5px, -9px);
 }
 .nav-links{
     display: none;
-    background-color: red;
-    padding: 10px;
     position: relative;
+    height: auto;
+    padding: 10px;
+    width: 97%;
+    margin-top: 20px;
+}
+.cc-logo{
+    position: relative;
+    transform: translate(-50%, 0);
+    width: 10rem;
+    left: -30%;
 }
 .nav-links ul{
     list-style: none;
@@ -61,65 +99,66 @@
 }
 .nav-links li{
     display: inline-block;
-    margin-right: 50px;
-
+    margin-right: 30px;
+    margin-top: 10px;
 }
 .nav-links a{
     text-decoration: none;
-    color: #fff;
-    font-style: bold;
+    color: red;
+    font-weight: bold;
     font-size: 18px;
 }
+.nav-links a:hover{
+    color: orange;
+}
 @media (min-width:769px) {
-    .nav-links{
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: red;
-    }
-    .menu-icon{
+    .hamburger{
         display: none;
     }
-    .dashboard-menu{
+    .menu{
+        display: none;
+    }
+    .nav-links{
+        display: flex;
+        position: absolute;
+        top: 10px;
+        background-color: #fff;
+        justify-content: flex-end;
+    }
+    .header{
         display: none;
     }
 }
-@media (max-width:768px) {
-    #menu-toggle{
+@media (max-width:769px) {
+    .menu-toggle:checked ~ .menu{
+        display: flex;
+    }
+    .nav-links{
+        display: none;
+    }
+    .menu-toggle{
         display: block;
         position: absolute;
         opacity: 0;
         cursor: pointer;
     }
-    .menu-icon{
-        display: block;
-    }
-    .nav-links{
-        display: none;
-    }
-    .dashboard-menu{
-        display: none;
-    }
-    #menu-toggle:checked ~ #dashboard-menu{
-        display: block;
-    }
 }
-
 #headline{
-    font-size: 30px;
+    font-size: 3rem;
     font-family: Tahoma;
     font-weight: bold;
     color: red;
     text-align: center;
+    transition: 2s;
+    margin-top: 20%;
 }
-
 #headline1{
-    font-size: 25px;
+    font-size: 1.5rem;
     color: blue;
     justify-content: center;
+    transition: 2s;
+    font-style: Tahoma;
 }
-
 #horizontal-rule{
     border-color: rgb(255, 0, 0);
 }
@@ -135,6 +174,7 @@
     margin-top: 5rem;
     font-weight: bold;
     margin-left: 0.5rem;
+    transition: 0.5s;
 }
 .data-link{
     color: white;
@@ -188,12 +228,22 @@
     .what-we-do{
         grid-template-columns: 1fr;
     }
+    .content{
+        font-size: 1rem;
+    }
+    #headline, #headline4{
+        font-size: 1.5rem;
+    }
+    #headline1, #headline3{
+        font-size: 1.2rem;
+    }
 }
 #table2{
     height: auto;
     width: 100%;
     border: none;
     background-color: rgb(11, 11, 110);
+    margin-top: 10%;
 }
 .table-row{
     display: grid;
@@ -217,6 +267,7 @@
     background-color: #fff;
     border-radius: 20px;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 #teaser-headline{
     font-family: Calibri;
@@ -272,26 +323,27 @@
         text-align: left;
         background: rgb(11, 11, 110);
         margin-left: 0;
-        height: 65vh;
+        height: 60vh;
 }
     #teaser-headline{
     font-family: Calibri;
-    font-size: 30px;
+    font-size: 1.3rem;
     margin-left: 10px;
 }
     #teaser-text{
-    font-size: 20px;
+    font-size: 1rem;
     margin-left: 10px;
 }
 .department-button{
     padding: 5px;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 0.8rem;
     margin-left: 20%;
 }
     .overlay-text{
     transform: translate(50%, -110%);
     padding-top: 5px;
+    font-size: 0.8rem;
 }
 }
 .podcast-wrapper{
@@ -308,13 +360,13 @@
 }
 .podcast{
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s;
 }
 #podcast-heading{
     text-align: center;
     font-weight: bold;
     font-size: 40px;
     color: red;
+    margin-top: 20%;
 }
 #podcast-content{
     display: flex;
@@ -325,6 +377,9 @@
     font-size: 22px;
     color: rgb(11, 11, 110);
     margin: 5rem;
+    transition: 0.5s;
+    margin-top: 5%;
+    margin-bottom: 15%;
 }
 #playicon{
     height: 3rem;
@@ -356,7 +411,7 @@
     width: 20%;
     height: 40px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 70%);
 }
 .podcast-button:hover{
     background-color: #07001f;
@@ -375,35 +430,82 @@
 @media (max-width:768px) {
     .podcast-container{
         grid-template-columns: 1fr;
+        margin-bottom: 10%;
+    }
+    #podcast-heading{
+        font-size: 1.3rem;
+    }
+    #podcast-content{
+        font-size: 1rem;
+        margin-bottom: 30%;
+    }
+    #playicon{
+        height: 2rem;
+        width: 2rem;
+        padding: 2px;
+    }
+    .podcast-title{
+        font-size: 1rem;
+    }
+    #listen-link{
+        font-size: 1rem;
     }
     .podcast-button{
     width: 70%;
     margin-top: -22%;
+    font-size: 0.8rem;
     }
 }
 .excerpts-table{
     width: 100%;
-    border-collapse: none;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    margin-top: 20%;
 }
 .excerpts{
-    padding: 10px;
-    height: 400px;
+    text-align: center;
     width: auto;
+    font-weight: bold;
 }
 .text-box{
-    height: 650px;
-    width: 450px;
+    width: 23rem;
+    height: 50vh;
 }
 #excerpts-subtitle{
     font-size: 20px;
     color:  rgba(255, 166, 0, 0.918);
     margin-left: 40px;
+    animation: textShadow 2s infinite;
+}
+@keyframes textShadow {
+    0%{
+        text-shadow: 0 0 10px rgba(255, 182, 105, 1);
+    }
+    50%{
+        text-shadow: 0 0 20px rgba(255, 165, 0, 1);
+    }
+    100%{
+        text-shadow: 0 0 10px rgba(255, 140, 0, 1);
+    }
 }
 #excerpts-headline{
+    position: relative;
     font-weight: bold;
     color: red;
     font-size: 36px;
     margin-left: 40px;
+    margin-top: 20rem;
+    animation: typewriter 2s steps(40);
+}
+@keyframes typewriter {
+    0%{
+        width: 0;
+    }
+    100%{
+        100%
+    }
 }
 .excerpts-button{
     background: rgba(255, 166, 0, 0.918);
@@ -423,8 +525,13 @@
 }
 #img-excerpt{
     display: absolute;
-    height: 25rem;
-    width: 25rem;
+    height: 23rem;
+    width: 23rem;
+    animation: zoomIn 1s;
+}
+@keyframes zoomIn {
+    0%{transform: scale(0.5);}
+    100%{transform: scale(1);}
 }
 .excerpts-link{
     color: #fff;
@@ -437,12 +544,9 @@
     background-color: #07001f;
     color: rgb(69, 69, 240);
 }
-.excerpt-details{
-    text-align: center;
-    font-weight: bold;
-}
 #excerpts-date{
     color: red;
+    margin-top: 50px;
 }
 .read-more-link{
     text-decoration: none;
@@ -450,6 +554,29 @@
 }
 .read-more{
     color: red;
+    margin-bottom: 30%;
+}
+@media (max-width:768px) {
+    .excerpts-table{
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+    .text-box{
+        height: 50vh;
+    }
+    #excerpts-headline{
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+    #excerpts-subtitle{
+        font-size: 1.1rem;
+    }
+    .excerpts{
+    font-size: 0.8rem;
+    }
+    .excerpts-button{
+    font-size: 0.8rem;
+    }
 }
 .end{
     height: auto;
@@ -472,6 +599,10 @@
     font-size: 2rem;
     position: relative;
 }
+#end-header{
+    font-size: 2rem;
+    position: relative;
+}
 .follow-us{
     position: relative;
     margin-top: -10px;
@@ -479,36 +610,38 @@
 }
 .social-links{
     list-style-type: none;
-    grid-template-columns: repeat(4, 1fr);   
+    grid-template-columns: repeat(5, 1fr);   
     position: relative;
     transform: translate(-20%, 10%);
 }
 .social-links li{
     display: inline;
-    padding: 8px;
+    padding: 0;
 }
-#youtube{
+#IG, #youtube, #whatsapp, #telegram{
     position: relative;
-    height: 3rem;
-    width: 3rem;
-    transform: translate(-20%, 5%);
-}
-#IG{
-    position: relative;
-    height: 2.7rem;
-    width: 3rem;
-}
-#whatsapp{
-    position: relative;
-    height: 2.5rem;
-    width: 3rem;
-    transform: translate(-20%, -5%);
+    height: 1rem;
+    width: 1rem;
+    border: 2px solid #fff;
+    border-width: 0.7rem;
+    background-color: #fff;
+    border-radius: 30px;
 }
 #facebook{
     position: relative;
-    height: 3.5rem;
-    width: 4rem;
-    transform: translate(-10%, 10%);
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 2px solid #fff;
+    border-width: 0.5rem;
+    background-color: #fff;
+    border-radius: 30px;
+}
+#useful-links-table{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 20px;
 }
 .contactUs{
     position: relative;
@@ -520,9 +653,9 @@
 }
 #locate-us{
     margin-left: 30px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
-#phone-number, #venue{
+#phone-number, #venue{ 
     margin-left: 30px;
     text-decoration: none;
     color: white;
@@ -530,7 +663,7 @@
 .useful-data{
     text-decoration: none;
     color: #fff;
-    line-height: 10vh;
+    line-height: 4.5em;
 }
 .useful-data:hover, #phone-number:hover{
 color: orange;
@@ -552,63 +685,77 @@ color: orange;
         flex-direction: column;
     }
     #end-headers{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        margin-left: -18%;
+    }
+    #end-header{
+        font-size: 1.2rem;
+        margin-left: 3%;
+        margin-top: 10%;
+        margin-bottom: 0;
     }
     .follow-us{
-        margin-top: 10px;
-        transform: translate(-6%, -10%);
-        margin-bottom: -92px;
+        margin-top: 30%;
+        transform: translate(10%, 40%);
+        margin-bottom: -30px;
     }
     .social-links{
-        transform: translate(-17%, -15%);
+        transform: translate(-35%, -15%);
+        margin-bottom: 0;
     }
     .useful-data{
-        line-height: 0%;
-        font-size: 1.2rem;
+        text-decoration: none;
+        color: #fff;
+        line-height: 0;
+    }
+    .list-item{
+        margin-left: 8%;
+        font-size: 1rem;
+        text-wrap: nowrap;
     }
     .contactUs{
-        margin-top: -50px;
+        margin-top: -10px;
         margin-left: 10px;
-        transform: translate(-16%, 0);
+        transform: translate(-10%, -20%);
     }
     #contact-us{
-        margin-left: 0px;
+        margin-left: -15%;
         margin-top: 10px;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     #phone-number{
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-left: -5%;
     }
     #locate-us{
-        margin-left: 0;
+        margin-left: -15%;
         margin-top: 10px;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     #phone{
         position: absolute;
         transform: translate(-20%, 20%);
+        margin-left: -20%;
         height: 2.5rem;
         width: 2.5rem;
     }
     #location-photo{
-        transform: translate(-20%, -15%);
+        transform: translate(-20%, -20%);
+        margin-left: -20%;
         height: 3.5rem;
         width: 3rem;
+    }
+    #venue{
+        font-size: 1rem;
+        margin-left: -5%;
     }
     }
 #footer{
     background-color: red;
     text-align: center;
     color: white;
-    padding: 10px;
-    margin-top: 0;
-}
-#useful-links-table{
     padding: 5px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    row-gap: 50px;
+    margin-top: 0;
 }
 .subscription-wrapper{
     width: 65vw;
@@ -623,19 +770,10 @@ color: orange;
     margin-bottom: -5px;
 }
 .wrapper-text{
-    margin-right: 40px;
+    margin-left: -5%;
     font-weight: bold;
     color: white;
-}
-.subscription-container{
-    position: relative;
-    width: 550px;
-    height: 40px;
-    background-color: #ddd;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.3em;
 }
 #subscribe-button{
     position: absolute;
@@ -644,7 +782,7 @@ color: orange;
     background-color: red;
     border-radius: 75px;
     cursor: pointer;
-    right: 0;
+    right: 20%;
     justify-content: center;
     align-items: center;
     color: white;
@@ -655,43 +793,65 @@ color: orange;
 #subscribe-button:hover{
     background-color: blue;
 }
-.subscribe{
-    width: 350px;
-}
 #emailInput{
-    width: 350px;
-    margin-left: -160px;
-    padding: 5px;
+    position: relative;
+    width: 25rem;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     outline: none;
+    margin-left: 5%;
+    padding: 0 11px;
+    overflow: hidden;
 }
-.subscribe-placeholder{
-    position: absolute;
-    top: 30%;
-    transform: translateY(-10%);
-    color: #aaa;
-    transition: 0.3s ease;
-}
-#emailInput:focus + .subscribe-placeholder,
-#emailInput:not(:subscribe-placeholder-shown) + .subscribe-placeholder
-{top: -10px; font-size: 12px;}
-
-@media (max-width:768px) {
+@media (max-width:767px) {
     .subscription-wrapper{
-        width: 80vw;
-        height: 8vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 75vw;
+        height: 20vh;
         padding: 20px;
-        margin-left: 8px;
-        margin-bottom: -20px;
+        margin-left: 7px;
+        margin-bottom: 0;
+        margin-right: 0;
+        border-radius: 50px;
+        background-color: rgb(32, 32, 131);
+        transform: translate(4%, 50%);
+        z-index: 1;
+    }
+    .wrapper-text{
+        margin: 0;
+        font-size: 1.2em;
+        margin-bottom: 5%;
+    }
+    .subscribe{
+        margin-bottom: 15px;
+    }
+    #emailInput{
+        width: 18rem;
+        height: 2rem;
+        border-radius: 20px;
+        margin-left: 0;
+    }
+    #subscribe-button{
+        position: relative;
+        width: 19rem;
+        height: 2.5rem;
+        border-radius: 20px;
+        right: 0;
+        top: 10px;
 }
-.subscription-container{
-    width: 150vw;
-    height: 4vh;
-}
-#subscribe-button{
-        width: 27vw;
-        height: 44px;
-}
+    #footer{
+    font-size: 0.8rem;
+    margin-left: 0.5%;
+    width: 96.5%;
+    height: auto;
+    }
 }
 
 
@@ -729,14 +889,17 @@ color: orange;
 .about-text-overlay p{
     font-size: 18px;
 }
-.homepage-link, .about-link{
+.tab-homepage, .tab-about{
     color: #fff;
     text-decoration: none;
 }
-.homepage-link:hover, .about-link:hover{
+.tab-homepage:hover, .tab-about:hover{
     color: orange;
 }
-@media (max-width: 600px){
+.tab-link.active{
+    color: orange;
+}
+@media (max-width: 768px){
     .about-text-overlay{
         bottom: 5%;
         left: 33%;
@@ -947,12 +1110,25 @@ color: orange;
     margin-left: 10px;
     font-weight: bold;
 }
+.shortcut.active{
+    color: red;
+}
 #homepage-link:hover, #partnership-link:hover{
     color: red;
 }
 #blessings{
     text-align: center;
     color: red;
+    animation: fadeInText 2s;
+    margin-top: 20%;
+}
+@keyframes fadeInText {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .partner-container{
     max-width: 800px;
@@ -961,6 +1137,13 @@ color: orange;
     border-radius: 10px;
     background-color: red;
     box-shadow: 50px #fff;
+    transform: translateY(100%);
+    animation: slideInFromBottom 0.5s 1s forwards;
+}
+@keyframes slideInFromBottom {
+    100%{
+        transform: translateY(0);
+    }
 }
 #preffered-method{
     font-size: 1.7rem;
@@ -1023,6 +1206,8 @@ color: orange;
         width: 100%;
     }
 }
+
+
 /* CSS for the momo partnership*/
 .momo-container{
     width: auto;
@@ -1034,6 +1219,13 @@ color: orange;
     background-color: #fff;
     font-size: 18px;
     box-shadow: 5px 5px 25px  red;
+    transform: scale(0.5);
+    animation: scaleUp 0.5s forwards;
+}
+@keyframes scaleUp {
+    100%{
+        transform: scale(1);
+    }
 }
 #paymentMomo{
     text-align: center;
@@ -1107,9 +1299,12 @@ input[type="text"] {
 }
 .PartnerNow:hover{
     background-color: orange;
-}
+
+
 
 /*CSS for the JOIN US FORM*/
+.ss{
+}
 .wwu-heading{
     position: absolute;
     bottom: 15%;
@@ -1150,6 +1345,15 @@ input[type="text"] {
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px red;
     max-width: 600px;
+    transform: scale(0.5);
+    opacity: 0;
+    animation: materialFadeIn 0.5s forwards;
+}
+@keyframes materialFadeIn {
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 form{
     margin:0 2rem;

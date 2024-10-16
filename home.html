@@ -6,34 +6,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <label for="menu-toggle" class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-    </label>
-    <input type="checkbox" id="menu-toggle"/>
-    <nav id="dashboard-menu" class="dashboard-menu">
-        <div>            
-            <p><a href="home.html"  class="dashboard-list">HOME</a></p>       
-            <p><a href="about.html"  class="dashboard-list">ABOUT</a></p>
-            <p><a href="excerpts.html" class="dashboard-list">EXCERPTS</a></p>
-            <p><a href="partner.html" class="dashboard-list">PARTNER</a></p>
-            <p><a href="joinus.html" class="dashboard-list">JOIN US </a></p>
-        </div>
-    </nav>
+    <div class="header">
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+<label for="menu-toggle" class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</label>
+<nav class="menu">
+    <ul>
+        <li><a href="home.html">Home</a></li>       
+        <li><a href="about.html">About</a></li>
+        <li><a href="excerpts.html">Excerpts</a></li>
+        <li><a href="partner.html">Partner</a></li>
+        <li><a href="joinus.html">Join Us </a></li>
+    </ul>
+</nav>
+<img src="cc-logo.PNG" class="ccc-logo">
+</div>
 
-    <nav class="nav-links">
-        <ul>            
-            <li><a href="home.html">HOME</a></li>       
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="excerpts.html">EXCERPTS</a></li>
-            <li><a href="partner.html">PARTNER</a></li>
-            <li><a href="joinus.html">JOIN US </a></li>
-        </ul>
-    </nav>
+<nav class="nav-links">
+    <img src="cc-logo.PNG" class="cc-logo">
+    <ul>            
+        <li><a href="home.html">HOME</a></li>       
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="excerpts.html">EXCERPTS</a></li>
+        <li><a href="partner.html">PARTNER</a></li>
+        <li><a href="joinus.html">JOIN US </a></li>
+    </ul>
+</nav>
+
 <br><br>
-<p id="headline">METAMORPHOO</p><hr id="horizontal-rule"><br><br>     
-                        <br>
+<p id="headline">METAMORPHOO</p><hr id="horizontal-rule">    
+
 <p id="headline1"><b>WHAT'S NEW? WATCH TO FIND OUT!</b></p>
         <div class="table-container">
                     <div id="video-data">
@@ -48,10 +53,10 @@
                         <p class="link-data"><a href="partner.html" class="data-link">PARTNER</a></p>
                     </div>
         </div>
-        <br><br><br><br>
-        <p id="headline3">WHAT WE DO</p><br>
+        
+        <p id="headline3">WHAT WE DO</p>
         <p id="headline4">Welcome To Metamorphoo</p>
-        <br><br>
+    
         <div class="what-we-do">
             <div class="content">
                 <img src="pin.PNG" class="pin">
@@ -82,7 +87,6 @@
             </p>
             </div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
                 <table id="table2">
                 <tr class="table-row">
@@ -113,7 +117,6 @@
                     <button class="department-button"><a href="department.html" class="department-link">JOIN A DEPARTMENT</a></button>
                 </tr>
                 </table>
-            <br><br><br><br><br><br>
 
             <p id="podcast-heading">Metamorphoo Podcasts</p>        
             <p id="podcast-content">
@@ -121,7 +124,7 @@
                 Bennie on topics such as the New Creation, Priesthood,
                  Sin, Faith, The Holy Spirit and More. <br><br>
                  There can't be true transformation without the knowledge of God. Be Transformed!<br><br>
-            </p><br><br>
+            </p>
             <div class="podcast-wrapper">
             <div class="podcast-container">
                     <div class="podcast">
@@ -155,72 +158,72 @@
                         <a href="spirit.html" id="listen-link">Listen Now</a>
             </div>
             </div>
-        </div><br><br><br>
-                
+        </div>             
                 <button class="podcast-button">
                     <a href="podcast.html" class="podcast-link">MORE PODCASTS</a></button> <br><br>
-                            <br><br><br><br>
+    
                             
-           <table id="excerpts-table">
-            <tr>
-                <td rowspan="2" class="text-box">
-                    <p id="excerpts-headline"><br><br><br><br><br><br><br><br>
-                        <br><br><br>Curated Excerpts from 
-                    Metamorphoo</p><br><br>
-                    <p id="excerpts-subtitle">Reflect on the lessons of transformation. 
-                        <br>Let these
-                        insights guide your own metamorphosis
-                    </p>
-                </td>
-                <td class="excerpts">
+           <div class="excerpts-table">
+                <div class="text-box">
+                    <p id="excerpts-headline">Curated Excerpts from 
+                    Metamorphoo</p>
+                    <p id="excerpts-subtitle">Reflect on the lessons of transformation.<br>
+                        Let these insights guide your own metamorphosis</p>
+                        <button class="excerpts-button">
+                            <a href="excerpts.html" class="excerpts-link">VIEW MORE EXCERPTS</a>
+                        </button>
+                </div>
+                
+                <div class="excerpts">
                     <img src="excerpt 1.JPG" id="img-excerpt">
-                </td>
-                <td class="excerpts">
-                    <img src="excerpt 2.JPG" id="img-excerpt">
-                </td>
-            </tr>
-            <tr>
-                <td class="excerpt-details">
-                    <p id="excerpts-date"><span style="font-size: 20px;">17</span> SEPTEMBER 2024</p><br>
-                    <p>EPISODE 1 - JESUS,</p>
-                    <p>THE GOOD SHEPHERD</p><br>
+                    <p id="excerpts-date"><span style="font-size: 20px;">17</span> SEPTEMBER 2024</p>
+                    <p>EPISODE 1 - JESUS,<br>
+                    THE GOOD SHEPHERD</p>
                     <p class="read-more"><a href="more-excerpts.html" class="read-more-link">
                         Read More</a></p>
-                </td>
-                <td class="excerpt-details">
-                    <p id="excerpts-date"><span style="font-size: 20px;">17</span> SEPTEMBER 2024</p><br>
-                    <p>EPISODE 1 - JESUS,</p>
-                    <p>THE GOOD SHEPHERD</p><br>
-                    <p class="read-more"><a href="excerpts.html" class="read-more-link">
-                    Read More</a></p>
-                </td>
-            </tr>
-            <tr>
-                <td class="hidden">
-                    <button class="excerpts-button">
-                        <a href="excerpts.html" class="excerpts-link">VIEW MORE EXCERPTS</a>
-                    </button>
-                </td>
-                <td class="excerpts">
+                </div>
+
+                <div class="excerpts">
+                    <img src="excerpt 2.JPG" id="img-excerpt">
+                    <p id="excerpts-date"><span style="font-size: 20px;">17</span> SEPTEMBER 2024</p>
+                    <p>EPISODE 1 - JESUS,<br>
+                    THE GOOD SHEPHERD</p>
+                    <p class="read-more"><a href="more-excerpts.html" class="read-more-link">
+                        Read More</a></p>
+                </div>
+
+                <div class="empty">
+                </div>
+
+                <div class="excerpts">
                     <img src="excerpt3.JPG" id="img-excerpt">
-                </td>
-                <td class="excerpts">
+                    <p id="excerpts-date"><span style="font-size: 20px;">17</span> SEPTEMBER 2024</p>
+                    <p>EPISODE 1 - JESUS,<br>
+                    THE GOOD SHEPHERD</p>
+                    <p class="read-more"><a href="more-excerpts.html" class="read-more-link">
+                        Read More</a></p>
+                </div>
+
+                <div class="excerpts">
                     <img src="excerpt 4.JPG" id="img-excerpt">
-                </td>
-            </tr>
-           </table> 
-           <br><br><br><br><br>
+                    <p id="excerpts-date"><span style="font-size: 20px;">17</span> SEPTEMBER 2024</p>
+                    <p>EPISODE 1 - JESUS,<br>
+                    THE GOOD SHEPHERD</p>
+                    <p class="read-more"><a href="more-excerpts.html" class="read-more-link">
+                        Read More</a></p>
+                </div>
+        </div> 
+           
 
            <div class="subscription-wrapper">
-            <div class="wrapper-text">Get The Latest Updates</div>
-           <div class="subscription-container">       
+            <div class="wrapper-text">Fresh Updates, Just for You!</div>       
                  <div class="Subscribe">
-                    <input type="email" id="emailInput" required placeholder="Enter Email"/>
-                    <label class="subscribe-placeholder" for="emailInput">Enter Email</label>
+                    <input type="email" id="emailInput" placeholder="Enter Email" required>
+                    <label class="subscribe-placeholder" for="emailInput"></label>
                 </div>
                 <button id="subscribe-button">Subscribe</button>
+                <p id="message" style="color: orange; margin-top: 10px;"></p>
            </div>
-        </div>
         
            <table class="end">
             <tr id="more-info-table">
@@ -236,17 +239,19 @@
                             <img src="youtube.PNG" id="youtube"></a></li>
                         <li><a href="" target="_blank">
                             <img src="watsapp.PNG" id="whatsapp"></a></li>
+                        <li><a href="" target="_blank">
+                            <img src="telegram.PNG" id="whatsapp"></a></li>
                     </ul></div>
                     </td>
                     <td class="end-column"> 
-                        <p id="end-headers">Useful Links</p>
+                        <p id="end-header">Useful Links</p>
                         <div id="useful-links-table">
-                                <li><a href="home.html" class="useful-data">Home</a></li> 
-                                 <li><a href="department.html" class="useful-data">Departments</a></li> 
-                                 <li><a href="excerpts.html" class="useful-data">Excerpts</a></li> 
-                                 <li><a href="joinus.html" class="useful-data">Join Us</a></li> 
-                                <li><a href="upcomingprogram.html" class="useful-data">Upcoming Events .</a></li> 
-                                <li><a href="partner.html" class="useful-data">Partner</a></li> 
+                                <li class="list-item"><a href="home.html" class="useful-data">Home</a></li> 
+                                 <li class="list-item"><a href="department.html" class="useful-data">Departments</a></li> 
+                                 <li class="list-item"><a href="excerpts.html" class="useful-data">Excerpts</a></li> 
+                                 <li class="list-item"><a href="joinus.html" class="useful-data">Join Us</a></li> 
+                                <li class="list-item"><a href="upcomingprogram.html" class="useful-data">Upcoming Events </a></li> 
+                                <li class="list-item"><a href="partner.html" class="useful-data">Partner</a></li> 
                         </div>
                      </td>
                     <td class="end-column">
@@ -265,6 +270,26 @@
            </table>
            <footer><p id="footer">Metamorphoo 2024 &copy; All rights reserved.</p>
            </footer>
-<script src="script.js"></script>
+<script>
+    //JS for handling the subscription// 
+    document.getElementById('subscribe-button').addEventListener
+('click', function() {
+    const email =
+document.getElementById('emailInput').value;
+    const message = 
+document.getElementById('message');
+
+    if (email) {
+        console.log('Subscribing:', {email });
+        message.textContent = 'Thank you for subscribing!';
+        
+document.getElementById('emailInput').value = '';
+    } else {
+        message.textContent = 'Please enter a valid email.';
+        message.style.color = 'red';
+    }
+});
+
+</script>
 </body>
 </html>  
