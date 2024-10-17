@@ -1,33 +1,39 @@
 /*CSS for the HOME PAGE*/
 .header{
+    display: flex;
     position: fixed;
-    background-color: rgb(231, 118, 118);
-    padding: 2px;
-    top: 2%;
+    background-color: red;
+    padding: 10px;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    max-width: 100%;
 }
 .ccc-logo{
-    margin-top: 15px;
-    width: 6rem;
-    margin-left: 10px;
+    margin-top: 5%;
+    width: 300px;
+    height: 300px;
+    margin-left: -70%;
 }
 .menu-toggle{
     display: none;
 }
 .hamburger{
+    position: absolute;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
     height: 30px;
-    margin-top: 15px;
-    z-index: 1000;
-    position: fixed;
     pointer-events: auto;
-    right: 20px;
+    margin-top: 13%;
+    margin-left: 83%;
+    z-index: 1000;
 }
 .bar{
     height: 4px;
@@ -84,13 +90,15 @@
     height: auto;
     padding: 10px;
     width: 97%;
+    height: 15%;
     margin-top: 20px;
 }
 .cc-logo{
     position: relative;
-    transform: translate(-50%, 0);
-    width: 10rem;
-    left: -30%;
+    transform: translate(-50%, -35%);
+    left: -10%;
+    width: 350px;
+    height:350px;
 }
 .nav-links ul{
     list-style: none;
@@ -100,11 +108,11 @@
 .nav-links li{
     display: inline-block;
     margin-right: 30px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .nav-links a{
     text-decoration: none;
-    color: red;
+    color: #fff;
     font-weight: bold;
     font-size: 18px;
 }
@@ -122,7 +130,7 @@
         display: flex;
         position: absolute;
         top: 10px;
-        background-color: #fff;
+        background-color: red;
         justify-content: flex-end;
     }
     .header{
@@ -504,7 +512,7 @@
         width: 0;
     }
     100%{
-        100%
+        width: 100%;
     }
 }
 .excerpts-button{
@@ -525,8 +533,8 @@
 }
 #img-excerpt{
     display: absolute;
-    height: 23rem;
-    width: 23rem;
+    height: 22rem;
+    width: 22rem;
     animation: zoomIn 1s;
 }
 @keyframes zoomIn {
@@ -889,6 +897,15 @@ color: orange;
 .about-text-overlay p{
     font-size: 18px;
 }
+.tab{
+    display: none;
+}
+.tab-active{
+    display: block;
+}
+.tab-button.active{
+    color: orange;
+}
 .tab-homepage, .tab-about{
     color: #fff;
     text-decoration: none;
@@ -901,12 +918,12 @@ color: orange;
 }
 @media (max-width: 768px){
     .about-text-overlay{
-        bottom: 5%;
+        bottom: 17%;
         left: 33%;
         transform: translate(-50%, 0);
     }
     .about-text-overlay h2{
-        font-size: 2em;
+        font-size: 1.5em;
     }
     .about-text-overlay p{
         font-size: 1.5em;
@@ -958,11 +975,11 @@ color: orange;
     }
 }
 .mission-container{
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(3, 380px);
     padding: 10px;
     display: grid;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 20%;
 }
 .mission-item{
@@ -994,7 +1011,7 @@ color: orange;
     grid-template-columns: repeat(2, 1fr);
     background-color: chocolate;
     justify-content: center;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     padding: 10px;
     position: relative;
@@ -1299,12 +1316,10 @@ input[type="text"] {
 }
 .PartnerNow:hover{
     background-color: orange;
-
+}
 
 
 /*CSS for the JOIN US FORM*/
-.ss{
-}
 .wwu-heading{
     position: absolute;
     bottom: 15%;
@@ -1421,4 +1436,70 @@ input:focus~label,input:not(:placeholder-shown)~label{
     font-weight: bold;
     color: red;
     font-family: calibri;
+}
+.whatsappUs{
+    display: flex;
+    border-radius: 40px;
+    padding: 10px;
+    height: auto;
+    width: 70%;
+    color: #fff;
+    background-color: rgb(37, 161, 37);
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    right: 0.5%;
+    bottom: 10%;
+    transition: background-color 0.5s, transform 0.2s;
+}
+.whatsappUs:active{
+    transform: scale(0.7);
+}
+.whatsapp{
+    width: 2rem;
+}
+#welcomeNote{
+    display: none;
+    top: 50%;
+    position: relative;
+    border: 2px solid;
+    border-radius: 10px;
+    position: absolute;
+}
+.contact{
+    margin: 5px 0;
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 5px;
+    color: rgb(37, 161, 37);
+}
+.vibes-container{
+    background-color: #fff;
+    padding: 20px;
+    color: rgb(37, 161, 37);
+}
+.contact-container{
+    padding: 20px;
+    background-color: #fff;
+}
+.whatsapp-contact{
+    width: 3rem;
+}
+#contact-link{
+    color: rgb(37, 161, 37);
 }
