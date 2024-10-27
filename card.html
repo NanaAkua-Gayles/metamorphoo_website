@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Payment-Metamorphoo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card-payment-form">
+            <p id="card-pay">Metamorphoo Card Partnership</p>
+
+            <div class="visa-field">
+                <label for="card-type" class="label-text">Credit or Debit Card</label>
+                <img src="visa.PNG" class="card-type">
+            </div>
+
+        <div class="card-field">
+            <label for="cardholder-name">Cardholder Name (exactly as shown on card) *</label>
+            <input type="text" id="cardholder-name" placeholder="Metamorphoo Fellowship" required>
+            <div class="cError" id="name-error" style="display: none;">Please enter your name.</div>
+        </div>
+        <div class="card-field">
+            <label for="card-number">Card Number *</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required pattern="\d{16}">
+            <div class="cError" id="card-error" style="display: none;">Please enter a valid 16-digit card number.</div>
+        </div>
+
+        <div class="card-field">
+            <label for="expiry-date">Expiry Date (MM/YY) *</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY" required pattern="\d{2}/\d{2}">
+            <div class="cError" id="expiry-error" style="display: none;">Please enter a valid expiry date</div>
+        </div>
+
+        <div class="card-field">
+            <label for="security-code">Security Code (CVV) *</label>
+            <input type="password" id="security-code" placeholder="***" required pattern="\d{3}">
+            <div class="cError" id="code-error" style="display: none;">Please enter a valid CVV.</div>
+        </div>
+
+        
+        <div class="card-field">
+            <label for="cPhone">Phone Number *</label>
+            <input type="tel" id="cPhone" placeholder="0245789330" required>
+            <div class="cError" id="phone-error" style="display: none;">Please enter a valid phone number.</div>
+        </div>
+
+        <div class="card-field">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="metamorphoo@example.com" required>
+            <div class="cError" id="email-error" style="display: none;">Please enter a valid email address.</div>
+        </div>
+
+
+            <button class="submit-button" type="submit" onclick="validateForm()">Partner Now</button>
+    </div>
+
+
+
+    <script>
+        function validateForm(){
+            let valid = true;
+
+            const name = 
+document.getElementById('cardholder-name');
+            const nameError = 
+document.getElementById('name-error');
+            if (!name.value) {
+                nameError.style.display = 'block';
+                valid = false;
+            } else {
+                nameError.style.display = 'none';
+            }
+
+
+            const card = 
+document.getElementById('card-number');
+            const cardError = 
+document.getElementById('card-error');
+            if (!/^\d{16}$/.test(card.value.replace(/\s/g, ''))) {
+                cardError.style.display = 'block';
+                valid = false;
+            } else {
+                cardError.style.display = 'none';
+            }
+
+
+            const expiry = 
+document.getElementById('expiry-date');
+                const expiryError = 
+document.getElementById('expiry-error');
+            if (!/^\d{2}\/\d{2}$/.test(expiry.value)) {
+                expiryError.style.display = 'block';
+                valid = false;
+            } else {
+                expiryError.style.display = 'none';
+            }
+
+
+            const code = 
+document.getElementById('security-code');
+                const codeError = 
+document.getElementById('code-error');
+            if (!/^\d{3}$/.test(code.value)) {
+                codeError.style.display = 'block';
+                valid = false;
+            } else {
+                codeError.style.display = 'none';
+            }
+
+
+            const phone = 
+document.getElementById('cPhone');
+                const phoneError = 
+document.getElementById('phone-error');
+            if (!phone.value) {
+                phoneError.style.display = 'block';
+                valid = false;
+            } else {
+                phoneError.style.display = 'none';
+            }
+
+
+            const email = 
+document.getElementById('email');
+            const emailError = 
+document.getElementById('email-error');
+            if(!email.validity.valid){
+                emailError.style.display = 'block';
+                valid = false;
+            } else {
+                emailError.style.display = 'none';
+            }
+
+            if (valid) {
+                alert('Partnership Successful!');
+            }
+        }
+    </script>
+</body>
+</html>

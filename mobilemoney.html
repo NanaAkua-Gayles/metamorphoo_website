@@ -46,6 +46,102 @@
         <button class="PartnerNow">Partner Now</button>
     </div>
 
-    <script src="script.js"></script>
+    <div class="manualCheck">
+        <div>
+    <p>Please Be Sure To Complete Your Partnership</p>
+    <p>A mobile money Prompt will be pushed to you for authorization.</p>
+    <p>OR</p>
+        </div>
+
+        <div class="button-slider">
+            <button onclick="prevSlide()">Previous</button>     
+            <button onclick="prevSlide()">Next</button>     
+        </div>
+
+        <div class="sliderContainer" id="slider">
+    <div class="manualCheck1">
+        <ol>
+            <p>FOR MTN USE</p>
+            <li>Dial *170#</li>
+            <li>Select Option 6 (My Wallet)</li>
+            <li>Select option 3 (My Approvals)</li>
+            <li>Enter your MOMO pin to retrieve your pending approval list</li>
+            <li>Select the Pending transaction and confirm authorization.</li>
+        </ol>
+    </div>
+
+    <div class="manualCheck2">
+        <ol>
+            <p>FOR TELECEL USE</p>
+            <li>Dial *110#</li>
+            <li>Select Option 6 (My Account)</li>
+            <li>Select option 5 (Approvals)</li>
+            <li>Enter your MOMO pin to get to your approvals list</li>
+            <li>Select the Pending transaction and confirm authorization.</li>
+        </ol>
+    </div>
+    <div class="manualCheck3">
+        <ol>
+            <p>FOR AIRTELTIGO USE</p>
+            <li>Dial *170#</li>
+            <li>Select Option 6 (my wallet)</li>
+            <li>Select option 3 (My approvals)</li>
+            <li>Enter your MOMO pin to get to your approvals list</li>
+            <li>Select the Pending transaction and confirm authorization.</li>
+        </ol>
+    </div>
+</div>
+<div class="dots" id="dots">
+    <span class="dot" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+</div>
+</div>
+    <script src="script.js">
+
+        //JS for manual check swipe
+        let currentIndex = 0;
+        const totalSlides = 3;
+        const slideInterval = 3000;
+
+        function updateSlidePosititon(){
+            const Slider = 
+document.getElementById('slider');
+            Slider.style.transform = 
+`translateX(${-currentIndex * 100}VW)`;
+            updateDots();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlidePosititon();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlidePosititon();
+        }
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlidePosititon();
+        }
+        function updateDots() {
+            const dots = 
+document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function autoSlide() {
+            setInterval(nextSlide, slideInterval);
+        }
+
+        autoSlide();
+
+
+
+
+    </script>
 </body>
 </html>
