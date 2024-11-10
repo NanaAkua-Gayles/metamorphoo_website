@@ -19,7 +19,7 @@
         </div>
         <div class="momo-item">
             <label>
-                <input type="checkbox" name="momo-partnership" value="option 2">
+                <input type="checkbox" name="momo-partnership" value="option 2" id="checkbox">
                 <img src="voda.JPG" id="voda-image">
             </label>
         </div>
@@ -31,7 +31,7 @@
         </div>
         </div> <br><br><br>
         <div class="momo-form-group">
-            <label for="partnershipType">Choose the kind of Partnership:</label>
+            <label for="partnershipType" id="momo-label">Choose the kind of Partnership:</label>
             <select id="partnershipType" name="partnershipType">
                 <option value="faithgift">Faith Gift</option>
                 <option value="specialpartnership">Special Partnership</option>
@@ -40,7 +40,7 @@
         </div>
         <div class="momo-form-group">
             <label for="phoneNumber">Phone Number:</label><br><br>
-            <input type="text" id="phoneNumber" name="phoneNumber"
+            <input type="text" id="phoneNumber" name="phoneNumber" class="phoneNumber"
              placeholder="Enter your phone number" required>
         </div>
         <button class="PartnerNow">Partner Now</button>
@@ -48,9 +48,9 @@
 
     <div class="manualCheck">
         <div>
-    <p>Please Be Sure To Complete Your Partnership</p>
-    <p>A mobile money Prompt will be pushed to you for authorization.</p>
-    <p>OR</p>
+    <p><span style="font-weight: bold; font-size: 1.3em;">Please Be Sure To Complete Your Partnership</span></p>
+    <p>An authorization request for mobile money payment will be sent to you shortly.</p>
+    <p><span style="font-weight: bold; font-size: 1.5em; margin: 50%;">OR</span></p>
         </div>
 
         <div class="button-slider">

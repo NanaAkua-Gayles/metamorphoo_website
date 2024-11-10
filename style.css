@@ -8,41 +8,61 @@ body{
 }
 
 /*CSS for the HOME PAGE*/
-#photoModal{
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-#photoModal img{
-    max-width: 90%;
-    max-height: 90%;
-    position: relative;
-}
-#closeBtn{
+.headLink{
     position: absolute;
-    top: 40px;
-    right: 13%;
-    background: none;
-    border: none;
+    width: 100%;
+    background-image: url(bhd.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 20;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 30px;
+    margin-left: -30px;
+    margin-top: -30px;
+    box-sizing: border-box;
 }
-
+.cInfo{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.hphone{
+    width: 1.7vw;
+}
+.hmail{
+    width: 2vw;
+}
+.sM{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.tiktok{
+    width: 2vw;
+    height: 3vh;
+}
+.wfb{
+    width: 1vw;
+    height: 3vh;
+}
+.wig{
+    width: 2.2vw;
+    height: 3vh;
+}
+.wyt{
+    width: 1.7vw;
+    height: 2.7vh;
+}
+@media (max-width:768px) {
+    
+}
 .header{
     display: flex;
     position: fixed;
-    background-color: red;
+    background-image: url(hbg.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 10px 20px;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -168,8 +188,10 @@ body{
     .nav-links{
         display: flex;
         position: absolute;
-        top: 10px;
-        background-color: red;
+        top: 50px;
+        background-image: url(hbg.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
         justify-content: flex-end;
     }
     .header{
@@ -212,9 +234,11 @@ body{
 .table-container{
     display: grid;
     grid-template-columns: 7fr 3fr;
-    background: rgb(11, 11, 110);
+    background-image: url(bluebg.WEBP);
     font-size: 1.7rem;
     padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #table-data{
     padding: 10px;
@@ -228,7 +252,7 @@ body{
     text-decoration: none;
 }
 .data-link:hover{
-    color: orange;
+    color: red;
 }
 #headline3{
     font-weight: bolder;
@@ -292,9 +316,11 @@ body{
 }
 #table2{
     height: auto;
-    max-width: 100%;
+    width: 100%;
     border: none;
-    background-color: red;
+    background-image: url(rbg.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-top: 10%;
 }
 .table-row{
@@ -302,9 +328,24 @@ body{
     grid-template-columns: 1fr 1fr;
 }
 #department-teaser{
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 69%;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 1s;
     text-align: left;
-    background: red;
-    margin-left: -5rem;
+    width: 595px;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }
 #department-photo{
     font-weight: bold;
@@ -336,8 +377,7 @@ body{
 }
 .department-button{
     padding: 10px 10px;
-    background: rgba(255, 166, 0, 0.918);
-    color: #fff;
+    background: white;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -439,8 +479,7 @@ body{
     50% { border-color: white; }
 }
 #playicon{
-    height: 3rem;
-    width: 3rem;
+    width: 2rem;
     padding: 5px;
 }
 .podcast-title{
@@ -450,7 +489,7 @@ body{
 #listen-link{
     font-size: 18px;
     padding: 5px;
-    color: orange;
+    color: rgb(0, 217, 255);
     text-decoration: none;
 }
 #listen-link:hover{
@@ -518,58 +557,87 @@ body{
 }
 .streamPhoto{
     margin-top: 10%;
-    min-width: 100%;
-    height: 95vh;
+    width: 100%;
+    height: 90vh;
+    box-shadow: 5px 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
-.streamHeadline{
+.newsContainer{
+    display: flex;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+    border: 2px solid #fff;
+    padding: 10px 0;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    box-shadow: 5px 5px 5px 20px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    font-size: 2em;
+    height: 25px;
+    font-size: 1em;
 }
-#streamText{
-    font-size: 1.5em;
+.newsItem{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60px 250px 1000px;
+    transition: transform 0.5s ease;
+    box-sizing: border-box;
 }
-.stream-overlay{
+.arrow{
     position: absolute;
-    margin-top: 35%;
-    left: 75%;
+    transform: translateY(-50%);
     padding: 10px;
-    opacity: 0;
-    animation: fadeIn 3s forwards;
-    animation-delay: 1s;
-}
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -60%);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-}
-.overlay-yt{
-    position: relative;
-    height: 1rem;
-    width: 1rem;
-    border: 2px solid #fff;
-    border-width: 0.3rem;
-    background-color: #fff;
-    border-radius: 30px;
-}
-.overlay-fb{
-    position: relative;
-    height: 1.3rem;
-    width: 1.3rem;
-    border: 2px solid #fff;
-    border-width: 0.15rem;
-    background-color: #fff;
-    border-radius: 30px;
-}
-#media-i{
-    padding: 5px;
-    text-decoration: none;
-    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
     font-weight: bold;
+    margin-top: 10px;
+    z-index: 2;
+}
+#prev{
+    right: 40px;
+}
+#next{
+    right: 10px;
+}
+#news-photo{
+    width: 4vw;
+    margin-top: -20px;
+}
+@media (max-width:800px) {
+    .newsContainer{
+        display: none;
+    }
+}
+.mainContainer{
+    display: block;
+    position: relative;
+    max-width: 520px;
+    margin-top: 30px;
+    color: #646060;
+}
+.mainStorypic{
+    width: 40vw;
+    margin-bottom: 20px;
+}
+.mcal{
+    width: 1.5vw;
+}
+.storiesContainer{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    width: 100%;
+    padding: 20px;
+    grid-column-gap: 20%;
+    grid-row-gap: 10%;
+    margin: 50px;
+}
+.sImg0{
+    width: 30vw;
+    height: 65vh;
+}
+.scal{
+    width: 1vw;
 }
 .excerpts-table{
     width: 100%;
@@ -577,7 +645,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 5px;
-    margin-top: 10%;
+    margin-top: 20%;
     background-image: url(background1.PNG);
     background-repeat: no-repeat;
     background-size: cover;
@@ -708,7 +776,9 @@ body{
     display: flex;
     flex-direction: row;
     position: relative;
-    background-color: rgb(11, 11, 110);
+    background-image: url(ebg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff;
     font-weight: bold;
     font-size: 1.3em;
@@ -788,19 +858,19 @@ body{
     line-height: 4.5em;
 }
 .useful-data:hover, #phone-number:hover{
-color: orange;
+color: red;
 }
 #phone{
     position: absolute;
-    transform: translate(-30%, -3%);
-    height: 3.5rem;
-    width: 3rem;
+    transform: translate(-10%, 25%);
+    height: 2rem;
+    width: 1.8rem;
 }
 #location-photo{
     position: absolute;
-    transform: translate(-30%, -20%);
-    height: 3.5rem;
-    width: 3rem;
+    transform: translate(-10%, 0);
+    height: 2.5rem;
+    width: 1.5rem;
 }
 @media (max-width:768px) {
     #more-info-table{
@@ -886,9 +956,9 @@ color: orange;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(11, 11, 110);
+    background-image: url(bluebg.WEBP);
     border-radius: 70px;
-    margin-top: -7%;
+    margin-top: -5.5%;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -1019,24 +1089,13 @@ color: orange;
 .about-text-overlay p{
     font-size: 18px;
 }
-.tab{
-    display: none;
-}
-.tab-active{
-    display: block;
-}
-.tab-button.active{
-    color: orange;
-}
-.tab-homepage, .tab-about{
+.link{
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
-.tab-homepage:hover, .tab-about:hover{
-    color: orange;
-}
-.tab-link.active{
-    color: orange;
+.link.aboutActive{
+    color: rgb(255, 136, 0);
 }
 @media (max-width: 768px){
     .about-text-overlay{
@@ -1062,9 +1121,8 @@ color: orange;
 #headline-text{
     font-size: 1.3rem;
     text-align: center;
-    color: rgb(11, 11, 110);
+    color: #007BFF;;
     margin-top: 0;
-    margin-bottom: 5%;
     padding: 20px;
 }
 .beTransformed{
@@ -1077,9 +1135,9 @@ color: orange;
     font-size: 20px;
     transition: background-color 0.3s;
     width: 20vw;
-    height: 7vh;
+    height: 6vh;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -80%);
     margin-bottom: 10%;
 }
 .beTransformed:hover{
@@ -1186,21 +1244,31 @@ color: orange;
     border: 5px solid chocolate;
 }
 @media (max-width:768px) {
+    #about-headline{
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 15%;
+    }
+    #headline-text{
+        font-size: 1em;
+    }
     .mission-container{
         grid-template-columns: 1fr;
-        font-size: larger;
         }
-    #headline-text{
-            font-size: 1.3rem;
+    .mission-item, .vision-item, .value-item{
+        font-size: 1em;
+    }
+    .beTransformed{
+        font-size: 0.9rem;
+        width: 35vw;
+        height: 5vh;
     }
     .worship-with-us-container{
         grid-template-columns: 1fr;
         margin-top: 30%;
-        height: 250vh;
-        display: flex;
     }
     #wwu-headline{
-        font-size: 2em;
+        font-size: 1.5em;
         text-align: center;
         margin: 0;
         padding: 10px;
@@ -1218,18 +1286,17 @@ color: orange;
         border-radius: 5px;
     }
     .wwu-image{
-        position: absolute;
-        transform: translate(-50%);
-        margin-top: 150%;
+        transform: translate(20%, -90%);
+        margin-top: 0;
         margin-bottom: 5px;
         height: auto;
-        left: 50%;
     }
     .wwu-button{
         margin-top: 30vh;
-        transform: translate(0%, 300%);
+        transform: translate(-15%, 250%);
         margin-bottom: 0%;
-        width: 70vw;
+        width: 40vw;
+        font-size: 0.7em;
     }
 } 
 
@@ -1280,8 +1347,9 @@ color: orange;
     margin: 40px auto;
     padding: 35px;
     border-radius: 10px;
-    background-color: red;
-    box-shadow: 50px #fff;
+    border: 2px solid red;
+    background-color: #fff;
+    box-shadow: 50px red;
     transform: translateY(100%);
     animation: slideInFromBottom 0.5s 1s forwards;
 }
@@ -1292,7 +1360,7 @@ color: orange;
 }
 #preffered-method{
     font-size: 1.7rem;
-    color: #fff;
+    color: red;
 }
 .payment-methods{
     display: flex;
@@ -1302,13 +1370,13 @@ color: orange;
 .payment-method{
     margin: 10px;
     padding: 15px;
-    border: 1px solid orange;
     border-radius: 10px;
     cursor: pointer;
-    width: 100%;
+    width: 90%;
     box-shadow: 75px;
     display: flex;
-    background-color: orange;
+    background-color: red;
+    border: 2px solid red;
 }
 #mobilemoney-image{
     display: absolute;
@@ -1327,7 +1395,7 @@ color: orange;
 }
 #payment-text{
     text-decoration: none;
-    color: red;
+    color: #fff;
     font-weight: bold;
     font-size: 1.3em;
     text-align: center;
@@ -1634,39 +1702,28 @@ form{
     margin-bottom: 0.4rem;
     color: red;
 }
-input{
-    color: inherit;
+.wwu-input, .wwu-textarea{
     width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
     background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #757575;
-    padding-left: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 15px;
+    box-sizing: border-box;
+}
+.wwu-textarea{
+    height: 100px;
+    resize: none;
 }
 .input-group{
     padding: 1% 0;
     position: relative;
 }
-.input:focus{
-    background-color: transparent;
-    outline: transparent;
-    border-bottom: 2px solid red;
-}
-input::placeholder{
-    color: transparent;
-}
-label{
+.form-label{
+    display: block;
     color: #757575;
-    position: relative;
-    left: 1.2rem;
-    top: -1.3em;
-    cursor: auto;
-    transition: 0.3s ease all;
-}
-input:focus~label,input:not(:placeholder-shown)~label{
-    top: -2.5em;
-    color: orange;
-    font-size: 15px;
+    margin-bottom: 8px;
 }
 .btn{
     font-size: 1.1rem;

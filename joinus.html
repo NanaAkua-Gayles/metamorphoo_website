@@ -24,28 +24,23 @@
             <p class="subtitle">
                 Your Words, Our Ears - Drop us a Line!
             </p><br>
-            <form method="post" action="">
-                <div class="input-group">
-                    <input type="text" name="fname" id="fName" placeholder="Full Name" required>
-                    <label for="fname">Enter Your Full Name</label>
-                </div>
-                <div class="input-group">
-                    <input type="text" name="phone" id="phonenumber" placeholder="Phone Number" required>
-                    <label for="fname">Enter Your Phone Number</label>
-                </div>
-                <div class="input-group">
-                    <input type= "email" name="email" id="email" placeholder="Email" required>
-                    <label for="email">Enter Your Email Address</label>
-                </div>
-                <div class="input-group">
-                    <input type= "text" name="sname" id="sname" placeholder="sname">
-                    <label for="sname">Type In Your Subject SpotLight</label>
-                </div>
-                <div class="input-group" id="messageUs">
-                    <input type="text" name="mname" id="mName" placeholder="mName">
-                    <label for="mname">Message Us (Optional)</label>
-                </div>
-                <input type="submit" class="btn" value="Contact Us Now" name="submit">
+            <form>
+                    <label for="fname" class="form-label">Enter Your Full Name</label>
+                    <input type="text" id="full-name" class="wwu-input" placeholder="Full Name" required>
+
+                    <label for="phone" class="form-label">Enter Your Phone Number</label>
+                    <input type="tel" id="wwu-phone" class="wwu-input" placeholder="Phone Number" required>
+
+                    <label for="email" class="form-label">Enter Your Email Address</label>
+                    <input type= "email" id="wwu-email" class="wwu-input" placeholder="Email" required>
+
+                    <label for="spotlight" class="form-label">Type In Your Subject SpotLight</label>
+                    <input type= "text" id="spotlight" class="wwu-input" placeholder="SpotLight" required>
+
+                    <label for="message" class="form-label">Message Us (Optional)</label>
+                    <textarea id="message" class="wwu-textarea" placeholder="Your Message here..."></textarea>
+                
+                    <button type="submit" class="btn">Contact Us Now</button>
             </form>
         </div>
 
