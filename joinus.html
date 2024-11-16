@@ -7,16 +7,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <img src="metamorphoo-logo.JPG" id="metamorphoo-logo"><br><br>
-        <h2 class="wwu-heading">Worship With Us</h2>
-    </div>
-    <div class="shortcut">
+        <video id= "joinusVideo" width= 100% height= "600" autoplay muted loop>
+            <source src="w-video.MP4" type="video/MP4">
+            </video>
+
+            <div class="video-overlay"></div>
+
+        <div class="juOverlay">
+            <div class="juswiper-container">
+                <div class="juswiper-wrapper">
+                    <div class="juswiper-slide">"The goal of the messages is for Christ to increase in you."</div>
+                    <div class="juswiper-slide">"When the word of God becomes life in your spirit, you can live it."</div>
+                    <div class="juswiper-slide">"The goal of God is to bring you to the complete expression of himself."</div>
+                    <div class="juswiper-slide">"One of the best things that can ever happen to you is to become the 
+                        very expression of God to your generation."</div>
+                    <div class="juswiper-slide">"There can't be true transformation without the knowledge of God."</div>
+                </div>
+                <button class="nav-button prev" id="juprev" onclick="prevSlide()">&#10094;</button>
+                <button class="nav-button next" id="junext" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+
+    <div class="linkShortcut">
         <p>
-            <a href="index.html" id="to-home">Home</a> |
-            <a href="joinus.html" id="in-wwu">Worship With Us</a>
+            <a href="index.html" class="wwu home">Home</a> <span style="font-size: 1.2em; color: rgb(15, 15, 190);
+">|</span>
+            <a href="joinus.html" class="wwu worshipWithUs">Worship With Us</a>
         </p>
     </div>
+
+    <iframe src="https://www.google.com/maps/place/SRC+Union+Building,+Accra/@5.6467526,-0.1874989,19z/data=!4m14!1m7!
+    3m6!1s0xfdf9c7fe9bcbbf7:0xdf7c2368a2f91a7f!2sSRC+Union+Building,+Accra!8m2!3d5.6469562!4d-0.1876599!16s%2Fg%2F1v2jf
+    838!3m5!1s0xfdf9c7fe9bcbbf7:0xdf7c2368a2f91a7f!8m2!3d5.6469562!4d-0.1876599!16s%2Fg%2F1v2jf838" 
+    width="600" height="450" style="border: 0; 
+   position: absolute; width: 100%; height: 100%; left: 0; right: 0; margin-top: 7%;" allowfullscreen="" loading="lazy"></iframe>
 
     <div class="worship-with-us-form">
         <div class="container" id="contactus">
@@ -48,6 +72,8 @@
             Let's chat it up on Whatsapp
             <img src="watsapp.PNG" class="whatsapp">
         </button>
+
+        <div id="welModal" class="modal">
         <div id="welcomeNote">
             <div class="vibes-container">
             <button class="close" id="closeButton">X</button>
@@ -62,39 +88,73 @@
             <img src="wa.nb.PNG" class="whatsapp-contact">
             <a href="https://wa.me/233543715539? text=Hello!%20I'm%20pumped%20to%20join%20the%20Metamorphoo
             %20Fellowship%20and%20can't%20wait%20to%20worship%20with%20you!
-            %20Can%20you%20please%20hit%20me%up%20with%20the%20details%3F
+            %20Can%20you%20please%20hit%20me%20up%20with%20the%20details%3F
             %20I'm%20________!%20"     
             id="contact-link" target="_blank">Metamorphoo Liaison 1</a></div>
         <div class="contact">
             <img src="wa.nb.PNG" class="whatsapp-contact">
             <a href="https://wa.me/233556807422? text=Hello!%20I'm%20pumped%20to%20join%20the%20Metamorphoo
             %20Fellowship%20and%20can't%20wait%20to%20worship%20with%20you!
-            %20Can%20you%20please%20hit%20me%up%20with%20the%20details%3F
+            %20Can%20you%20please%20hit%20me%20up%20with%20the%20details%3F
             %20I'm%20________!%20"     
             id="contact-link" target="_blank">Metamorphoo Liaison 2</a></div>
         <div class="contact">
             <img src="wa.nb.PNG" class="whatsapp-contact">
             <a href="https://wa.me/233248026271? text=Hello!%20I'm%20pumped%20to%20join%20the%20Metamorphoo
             %20Fellowship%20and%20can't%20wait%20to%20worship%20with%20you!
-            %20Can%20you%20please%20hit%20me%up%20with%20the%20details%3F
+            %20Can%20you%20please%20hit%20me%20up%20with%20the%20details%3F
             %20I'm%20________!%20"     
             id="contact-link" target="_blank">Metamorphoo Liaison 3</a></div>
         </div>
-    </div>
+    </div></div>
+
+
         <script>
-document.querySelector('.whatsappUs').onclick = 
-function(){
-document.getElementById('welcomeNote').style.display =
-'block';
-};
 
-document.getElementById('closeButton').onclick =
-function() {
+            //JS for swiperText
+            const juswiperWrapper = 
+document.querySelector('.juswiper-wrapper');
+            const juswiperSlides =
+document.querySelectorAll('.juswiper-slide');
+            let currentSlide = 0;
 
-document.getElementById('welcomeNote').style.display = 
-'none';
-};
+            function updateSlidePosititon() {
+                juswiperWrapper.style.transform = 
+`translateX(${currentSlide * -100}%)`;
+            }
+            function nextSlide() {
+                currentSlide++;
+                if (currentSlide >= juswiperSlides.length)
+{
+                    currentSlide = 0;
+}
+            updateSlidePosititon();
+            }
 
+            setInterval(nextSlide, 7000);
+
+
+
+            //JS FOR whatsapp button
+            const modal =
+document.querySelector('#welModal');
+           const btn = 
+document.querySelector('.whatsappUs');
+            const closeBtn = 
+document.querySelector('#closeButton');
+
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            closeBtn.onclick  = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            }
 
         </script>
 </body>

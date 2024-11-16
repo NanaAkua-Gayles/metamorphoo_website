@@ -13,19 +13,22 @@
     <div class="momo-grid">
         <div class="momo-item">
             <label>
-                <input type="checkbox" name="momo-partnership" value="option 1">
+                <input type="checkbox" name="momo-partnership" value="option 1"
+                onclick="selectCheckbox(this)">
                 <img src="momo.PNG" id="momo-image">
             </label>
         </div>
         <div class="momo-item">
             <label>
-                <input type="checkbox" name="momo-partnership" value="option 2" id="checkbox">
+                <input type="checkbox" name="momo-partnership" value="option 2"
+                onclick="selectCheckbox(this)">
                 <img src="voda.JPG" id="voda-image">
             </label>
         </div>
         <div class="momo-item">
             <label>
-                <input type="checkbox" name="momo-partnership" value="option 3">
+                <input type="checkbox" name="momo-partnership" value="option 3" 
+                onclick="selectCheckbox(this)">
                 <img src="at.JPG" id="at-image">
             </label>
         </div>
@@ -40,8 +43,8 @@
         </div>
         <div class="momo-form-group">
             <label for="phoneNumber">Phone Number:</label><br><br>
-            <input type="text" id="phoneNumber" name="phoneNumber" class="phoneNumber"
-             placeholder="Enter your phone number" required>
+            <input type="tel" id="phoneNumber" name="phoneNumber" class="phoneNumber"
+             placeholder="Enter your phone number" required pattern="[0-9]{10}">
         </div>
         <button class="PartnerNow">Partner Now</button>
     </div>
@@ -98,6 +101,17 @@
 </div>
 </div>
     <script src="script.js">
+
+        //JS for checkbox
+        function selectCheckbox(selectedCheckbox){
+            const checkboxes = 
+document.getElementsByName('momo-partnership');
+            checkboxes.forEach((checkbox) => {
+                if (checkbox !== selectedCheckbox) {
+                    checkbox.checked = false;
+                }
+            });
+        }
 
         //JS for manual check swipe
         let currentIndex = 0;
