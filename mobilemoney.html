@@ -13,22 +13,19 @@
     <div class="momo-grid">
         <div class="momo-item">
             <label>
-                <input type="checkbox" name="momo-partnership" value="option 1"
-                onclick="selectCheckbox(this)">
+                <input type="radio" name="momo-partnership" value="option 1">
                 <img src="momo.PNG" id="momo-image">
             </label>
         </div>
         <div class="momo-item">
             <label>
-                <input type="checkbox" name="momo-partnership" value="option 2"
-                onclick="selectCheckbox(this)">
+                <input type="radio" name="momo-partnership" value="option 1">
                 <img src="voda.JPG" id="voda-image">
             </label>
         </div>
         <div class="momo-item">
             <label>
-                <input type="checkbox" name="momo-partnership" value="option 3" 
-                onclick="selectCheckbox(this)">
+                <input type="radio" name="momo-partnership" value="option 1">
                 <img src="at.JPG" id="at-image">
             </label>
         </div>
@@ -83,16 +80,6 @@
             <li>Select the Pending transaction and confirm authorization.</li>
         </ol>
     </div>
-    <div class="manualCheck3">
-        <ol>
-            <p>FOR AIRTELTIGO USE</p>
-            <li>Dial *170#</li>
-            <li>Select Option 6 (my wallet)</li>
-            <li>Select option 3 (My approvals)</li>
-            <li>Enter your MOMO pin to get to your approvals list</li>
-            <li>Select the Pending transaction and confirm authorization.</li>
-        </ol>
-    </div>
 </div>
 <div class="dots" id="dots">
     <span class="dot" onclick="goToSlide(0)"></span>
@@ -101,17 +88,6 @@
 </div>
 </div>
     <script src="script.js">
-
-        //JS for checkbox
-        function selectCheckbox(selectedCheckbox){
-            const checkboxes = 
-document.getElementsByName('momo-partnership');
-            checkboxes.forEach((checkbox) => {
-                if (checkbox !== selectedCheckbox) {
-                    checkbox.checked = false;
-                }
-            });
-        }
 
         //JS for manual check swipe
         let currentIndex = 0;

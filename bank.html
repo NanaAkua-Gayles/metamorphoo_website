@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Partnership - Metamorphoo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form id="metamorphoo-bank-transfer-form">
+        <h2 id="btf">Metamorphoo Bank Transfer Form</h2>
+        
+        
+        <section class="metamorphoo-section">
+            <h3>Beneficiary Information</h3>
+            <label class="metamorphoo-label" for="beneficiary-name">Name:</label>
+            <input class="metamorphoo-input" type="text" id="beneficiary-name" required>
+            
+            <label class="metamorphoo-label" for="beneficiary-account-number">Account Number:</label>
+            <input class="metamorphoo-input" type="number" id="beneficiary-account-number" required>
+            
+            <label class="metamorphoo-label" for="beneficiary-ifsc-code">SWIFT Code:</label>
+            <input class="metamorphoo-input" type="text" id="beneficiary-swift-code" required>
+            
+            <label class="metamorphoo-label" for="beneficiary-bank-name">Bank Name:</label>
+            <select class="metamorphoo-select" id="beneficiary-bank-name" required>
+                <option value="">Select Bank</option>
+                <option value="GCB">Ghana Commercial Bank(GCB)</option>
+                <option value="SCB">Standard Chartered Bank Ghana</option>
+                <option value="Ecobank">Ecobank Bank</option>
+                <option value="Zenith">Zenith Bank Ghana</option>
+                <option value="Absa">Absa Bank Ghana</option>
+                <option value="ADB">Agricultural Development Bank</option>
+                <option value="Fidelity">Fidelity Bank Ghana</option>
+                <option value="FBN">First National Bank(FNB)</option>
+                <option value="FNB">First Bank Ghana(FBN)</option>
+                <option value="Calbank">CalBank</option>
+                <option value="Access">Access Bank</option>
+                <option value="CBG">Consolidated Bank Ghana(CBG)</option>
+            </select>
+        </section>
+        
+        
+        <section class="metamorphoo-section">
+            <h3>Remitter Information</h3>
+            <label class="metamorphoo-label" for="remitter-name">Name:</label>
+            <input class="metamorphoo-input" type="text" id="remitter-name" required>
+            
+            <label class="metamorphoo-label" for="remitter-account-number">Account Number:</label>
+            <input class="metamorphoo-input" type="number" id="remitter-account-number" required>
+            
+            <label class="metamorphoo-label" for="remitter-ifsc-code">SWIFT Code:</label>
+            <input class="metamorphoo-input" type="text" id="remitter-swift-code" required>
+        </section>
+        
+        
+        <section class="metamorphoo-section">
+            <h3>Transfer Details</h3>
+            <label class="metamorphoo-label" for="transfer-amount">Amount:</label>
+            <input class="metamorphoo-input" type="number" id="transfer-amount" required>
+            
+            <label class="metamorphoo-label" for="transfer-purpose">Purpose:</label>
+            <select class="metamorphoo-select" id="transfer-purpose" required>
+                <option value="">Select Purpose</option>
+                <option value="personal">Personal</option>
+                <option value="business">Business</option>
+                
+            </select>
+        </section>
+        
+        
+        <div class="metamorphoo-error" id="error-message">Please fill out all required fields.</div>
+    
+        
+        <button class="metamorphoo-button" type="submit">Initiate Transfer</button>
+    </form>
+    
+    <script>
+        document.getElementById('metamorphoo-bank-transfer-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let isValid = true;
+    
+            // Check all required fields
+            const requiredFields = this.querySelectorAll('[required]');
+            requiredFields.forEach(function(field) {
+                if (!field.value) {
+                    isValid = false;
+                }
+            });
+    
+            const errorMessage = document.getElementById('error-message');
+            if (!isValid) {
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+                // Form can be submitted or processed here
+                alert('Transfer Initiated!');
+                this.reset(); // Reset the form
+            }
+        });
+    </script>
+</body>
+</html>
